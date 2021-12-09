@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.17f1 (a4537701e4ab) revision 10769271'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Education; OS build 19042.1348; Version 2009; 64bit' Language: 'en' Physical Memory: 32544 MB
+OS: 'Windows 10 Home Single Language; OS build 22000.318; Version 2009; 64bit' Language: 'en' Physical Memory: 32717 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,97 +11,97 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Eye-Gaze-Simulation-in-Virtual-Reality-main/VR-Eye-Gaze-Unity
+D:/Unity Projects/Eye-Gaze-Simulation-in-Virtual-Reality/VR-Eye-Gaze-Unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49947
-Successfully changed project path to: C:/Eye-Gaze-Simulation-in-Virtual-Reality-main/VR-Eye-Gaze-Unity
-C:/Eye-Gaze-Simulation-in-Virtual-Reality-main/VR-Eye-Gaze-Unity
+51722
+Successfully changed project path to: D:/Unity Projects/Eye-Gaze-Simulation-in-Virtual-Reality/VR-Eye-Gaze-Unity
+D:/Unity Projects/Eye-Gaze-Simulation-in-Virtual-Reality/VR-Eye-Gaze-Unity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 67.01 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 54.67 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.17f1 (a4537701e4ab)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Eye-Gaze-Simulation-in-Virtual-Reality-main/VR-Eye-Gaze-Unity/Assets
+[Subsystems] Discovering subsystems at path D:/Unity Projects/Eye-Gaze-Simulation-in-Virtual-Reality/VR-Eye-Gaze-Unity/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
     Vendor:   
-    VRAM:     8011 MB
-    Driver:   30.0.14.7208
+    VRAM:     5991 MB
+    Driver:   30.0.14.9649
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56796
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001852 seconds.
+Registered in 0.001424 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.11 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 47.17 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.117 seconds
+- Completed reload, in  0.877 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1117ms)
-		BeginReloadAssembly (46ms)
+	ReloadAssembly (878ms)
+		BeginReloadAssembly (42ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (356ms)
-			LoadAssemblies (45ms)
+		EndReloadAssembly (367ms)
+			LoadAssemblies (40ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (134ms)
+			SetupTypeCache (125ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (140ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (154ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (44ms)
-				BeforeProcessingInitializeOnLoad (6ms)
+				RefreshPlugins (47ms)
+				BeforeProcessingInitializeOnLoad (13ms)
 				ProcessInitializeOnLoadAttributes (65ms)
-				ProcessInitializeOnLoadMethodAttributes (21ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.018904 seconds.
+Registered in 0.005485 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 43.35 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 46.88 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.069 seconds
+- Completed reload, in  1.082 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1070ms)
-		BeginReloadAssembly (119ms)
+	ReloadAssembly (1083ms)
+		BeginReloadAssembly (117ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (14ms)
-		EndReloadAssembly (897ms)
-			LoadAssemblies (97ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (912ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (251ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (395ms)
+			SetupTypeCache (254ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (420ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (43ms)
-				BeforeProcessingInitializeOnLoad (60ms)
-				ProcessInitializeOnLoadAttributes (274ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
+				RefreshPlugins (47ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (284ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -110,14 +110,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 1.27 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2469 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 102.4 MB.
-System memory in use after: 102.5 MB.
+System memory in use before: 115.9 MB.
+System memory in use after: 116.1 MB.
 
-Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 2882.
-Total: 2.605200 ms (FindLiveObjects: 0.201100 ms CreateObjectMapping: 0.096800 ms MarkObjects: 2.249500 ms  DeleteObjects: 0.057100 ms)
+Unloading 63 unused Assets to reduce memory usage. Loaded Objects now: 2905.
+Total: 3.464200 ms (FindLiveObjects: 0.306400 ms CreateObjectMapping: 0.069500 ms MarkObjects: 2.985800 ms  DeleteObjects: 0.100800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -133,145 +133,860 @@ AssetImportParameters requested are different than current active one (requested
 Received Import Request.
   path: Assets/ViveSR/Scenes/Eye
   artifactKey: Guid(386ee50fb108f07479879deedebb2367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR/Scenes/Eye using Guid(386ee50fb108f07479879deedebb2367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec110f84e088590b0d63faf019dc6314') in 0.006612 seconds 
-  Import took 0.010247 seconds .
+Start importing Assets/ViveSR/Scenes/Eye using Guid(386ee50fb108f07479879deedebb2367) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b80b025fc326f150b112a236729649b0') in 0.006855 seconds 
+  Import took 0.010451 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000160 seconds.
+  Time since last request: 0.000296 seconds.
   path: Assets/ViveSR/Scenes
   artifactKey: Guid(a61dfaae82a22ea46a30881e98813962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR/Scenes using Guid(a61dfaae82a22ea46a30881e98813962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2adc4fad60819ff189beb7e79af1be6') in 0.003661 seconds 
-  Import took 0.006548 seconds .
+Start importing Assets/ViveSR/Scenes using Guid(a61dfaae82a22ea46a30881e98813962) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9c746481696a849e6db0b1930b0c551') in 0.001844 seconds 
+  Import took 0.004906 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000164 seconds.
+  Time since last request: 0.000216 seconds.
   path: Assets/ViveSR
   artifactKey: Guid(388ea394193a3dd479b32281c6f2e69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR using Guid(388ea394193a3dd479b32281c6f2e69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20cdd793c3f91c830c353eb904a3bbe0') in 0.004255 seconds 
-  Import took 0.007261 seconds .
+Start importing Assets/ViveSR using Guid(388ea394193a3dd479b32281c6f2e69d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf6b04d21ddd6fd441f2bb05cbe1dcf') in 0.002451 seconds 
+  Import took 0.005637 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.580217 seconds.
+  Time since last request: 0.861969 seconds.
   path: Assets/ViveSR/Scenes/Eye/EyeSample.unity
   artifactKey: Guid(442215360aef07847ac6dc9a96f5c584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR/Scenes/Eye/EyeSample.unity using Guid(442215360aef07847ac6dc9a96f5c584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5be45965cd3c8bfd2e654328eece843c') in 0.009684 seconds 
-  Import took 0.012839 seconds .
+Start importing Assets/ViveSR/Scenes/Eye/EyeSample.unity using Guid(442215360aef07847ac6dc9a96f5c584) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5be45965cd3c8bfd2e654328eece843c') in 0.009075 seconds 
+  Import took 0.013297 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 121.111010 seconds.
-  path: Assets/ViveSR/Scenes/Lip
-  artifactKey: Guid(1041f81c591bc464c999e8c76d518f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR/Scenes/Lip using Guid(1041f81c591bc464c999e8c76d518f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba903a7dc461afbc69451b9fdaa5a220') in 0.004894 seconds 
-  Import took 0.008901 seconds .
+  Time since last request: 13.818278 seconds.
+  path: Assets/XR
+  artifactKey: Guid(76506f5468909e6478d855fc7dddc7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR using Guid(76506f5468909e6478d855fc7dddc7ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6702e441e3adb2191c35824a3aa96214') in 0.002409 seconds 
+  Import took 0.006117 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009737 seconds.
-  path: Assets/ViveSR/Scenes/Lip
-  artifactKey: Guid(1041f81c591bc464c999e8c76d518f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ViveSR/Scenes/Lip using Guid(1041f81c591bc464c999e8c76d518f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba903a7dc461afbc69451b9fdaa5a220') in 0.004585 seconds 
-  Import took 0.008031 seconds .
+  Time since last request: 0.090304 seconds.
+  path: Assets/XR/XRGeneralSettings.asset
+  artifactKey: Guid(899b6c6196a7fe44ea3130a5504c8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/XR/XRGeneralSettings.asset using Guid(899b6c6196a7fe44ea3130a5504c8f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [XR] Error loading subsystem: Display (1) (header mismatch?)
+ -> (artifact id: '1072d69f312adfb96945be904411dd61') in 0.033120 seconds 
+  Import took 0.037030 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 43.140396 seconds.
+  Time since last request: 9.331100 seconds.
+  path: Assets/Samples
+  artifactKey: Guid(75f228a8323d5334282e6d394a894cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples using Guid(75f228a8323d5334282e6d394a894cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c66b605f4c357d10ba8398b0a38a2c22') in 0.002584 seconds 
+  Import took 0.006348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.592692 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(776a105258c706a46a00cf58ed974c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources using Guid(776a105258c706a46a00cf58ed974c58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db853dad503cf0ffefb7a13fd0b48221') in 0.002170 seconds 
+  Import took 0.006154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.473547 seconds.
   path: Assets/Samples/Tobii XR SDK
   artifactKey: Guid(c16fbd6e1c240534c91b9dd6cbf83c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Tobii XR SDK using Guid(c16fbd6e1c240534c91b9dd6cbf83c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5196922c105ed1fb4d84247bcf5a86') in 0.005071 seconds 
-  Import took 0.008589 seconds .
+Start importing Assets/Samples/Tobii XR SDK using Guid(c16fbd6e1c240534c91b9dd6cbf83c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bef9532ec4b52ae5b87808467cc649c') in 0.002594 seconds 
+  Import took 0.006829 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009061 seconds.
-  path: Assets/Samples/Tobii XR SDK
-  artifactKey: Guid(c16fbd6e1c240534c91b9dd6cbf83c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Tobii XR SDK using Guid(c16fbd6e1c240534c91b9dd6cbf83c97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5196922c105ed1fb4d84247bcf5a86') in 0.004370 seconds 
-  Import took 0.008026 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.632215 seconds.
+  Time since last request: 0.628865 seconds.
   path: Assets/Samples/Tobii XR SDK/3.0.1
   artifactKey: Guid(6ff8cf5b4cb89924dbc7901c98dd0c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Tobii XR SDK/3.0.1 using Guid(6ff8cf5b4cb89924dbc7901c98dd0c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30cbf3d51bffabb3247df88308f05012') in 0.004855 seconds 
-  Import took 0.008115 seconds .
+Start importing Assets/Samples/Tobii XR SDK/3.0.1 using Guid(6ff8cf5b4cb89924dbc7901c98dd0c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '246ecab8f18354c28c54b27067ddfdf1') in 0.002653 seconds 
+  Import took 0.006489 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009251 seconds.
-  path: Assets/Samples/Tobii XR SDK/3.0.1
-  artifactKey: Guid(6ff8cf5b4cb89924dbc7901c98dd0c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Tobii XR SDK/3.0.1 using Guid(6ff8cf5b4cb89924dbc7901c98dd0c9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30cbf3d51bffabb3247df88308f05012') in 0.004327 seconds 
-  Import took 0.008024 seconds .
+  Time since last request: 2.180962 seconds.
+  path: Assets/Samples/Tobii XR SDK/3.0.1/Getting Started
+  artifactKey: Guid(4873466d11e8bc64db6f251f2be9db42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Tobii XR SDK/3.0.1/Getting Started using Guid(4873466d11e8bc64db6f251f2be9db42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '251eab9a47ed634d0e9d21ed890511b4') in 0.002287 seconds 
+  Import took 0.006109 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.662929 seconds.
-  path: Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination/Example_HandEyeCoordination.unity
-  artifactKey: Guid(a1afc59b71668494f993a9b2a118ca97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination/Example_HandEyeCoordination.unity using Guid(a1afc59b71668494f993a9b2a118ca97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e0e5ec6761102b7ab7237b69e484c3d') in 0.005093 seconds 
-  Import took 0.008406 seconds .
+  Time since last request: 1.237010 seconds.
+  path: Assets/Samples/Tobii XR SDK/3.0.1/Getting Started/Example_GettingStarted.unity
+  artifactKey: Guid(221a337531f80eb4eb510b1cd2874c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Tobii XR SDK/3.0.1/Getting Started/Example_GettingStarted.unity using Guid(221a337531f80eb4eb510b1cd2874c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c89a9f7a6a206ad782062a174f079d8') in 0.002713 seconds 
+  Import took 0.006196 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.018346 seconds.
+Registered in 0.006217 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 1.07 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Fixing exec order for 
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
 UnityEngine.Logger:Log (UnityEngine.LogType,object)
 UnityEngine.Debug:Log (object)
-Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/Users/45426317/Downloads/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
 System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-(Filename: C:/Users/45426317/Downloads/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.142 seconds
+- Completed reload, in  1.113 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1142ms)
-		BeginReloadAssembly (120ms)
+	ReloadAssembly (1113ms)
+		BeginReloadAssembly (121ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (962ms)
-			LoadAssemblies (109ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (925ms)
+			LoadAssemblies (85ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (289ms)
+			SetupTypeCache (320ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (395ms)
+			SetupLoadedEditorAssemblies (362ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (57ms)
-				ProcessInitializeOnLoadAttributes (317ms)
-				ProcessInitializeOnLoadMethodAttributes (10ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.85 ms, found 15 plugins.
+Refreshing native plugins compatible for Editor in 1.04 ms, found 15 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
+System memory in use before: 115.2 MB.
+System memory in use after: 115.4 MB.
 
-Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2887.
-Total: 3.251600 ms (FindLiveObjects: 0.295500 ms CreateObjectMapping: 0.177100 ms MarkObjects: 2.745100 ms  DeleteObjects: 0.032500 ms)
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2910.
+Total: 3.879400 ms (FindLiveObjects: 0.259400 ms CreateObjectMapping: 0.067800 ms MarkObjects: 3.511300 ms  DeleteObjects: 0.039600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008254 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.215 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1215ms)
+		BeginReloadAssembly (117ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1032ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (325ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (433ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (328ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.89 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.3 MB.
+System memory in use after: 115.5 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2915.
+Total: 5.641200 ms (FindLiveObjects: 0.371600 ms CreateObjectMapping: 0.081700 ms MarkObjects: 5.146400 ms  DeleteObjects: 0.040300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 677.303127 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Avatar_Shieh.fbx
+  artifactKey: Guid(48f002f93b38180409916a88121ceac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Avatar_Shieh.fbx using Guid(48f002f93b38180409916a88121ceac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cbabb3c368f51f0dd18ba27c1a3f6a5') in 0.258376 seconds 
+  Import took 0.262758 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000397 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_ao.png
+  artifactKey: Guid(e65b11d96b6e96b46a8b4bf2aa19344f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_ao.png using Guid(e65b11d96b6e96b46a8b4bf2aa19344f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca75b9f9987cc3eb80bd50a36ec58632') in 0.038331 seconds 
+  Import took 0.042206 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000417 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Avatar_Shieh.fbx
+  artifactKey: Guid(48f002f93b38180409916a88121ceac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Avatar_Shieh.fbx using Guid(48f002f93b38180409916a88121ceac3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cbabb3c368f51f0dd18ba27c1a3f6a5') in 0.073823 seconds 
+  Import took 0.078606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_normal.png
+  artifactKey: Guid(e6353fa07def4bd41b8b64a3387053cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_normal.png using Guid(e6353fa07def4bd41b8b64a3387053cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '896d74d1e9d1140ff8202efd0040ca98') in 0.026336 seconds 
+  Import took 0.030072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_albedo.png
+  artifactKey: Guid(652f3a0713d910a48a2a62fcaefd72ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_albedo.png using Guid(652f3a0713d910a48a2a62fcaefd72ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66760b2b19d4a49ee9b5ccc9eb8abfdf') in 0.011524 seconds 
+  Import took 0.015116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000328 seconds.
+  path: Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_metallic.png
+  artifactKey: Guid(2ef75489dda574346a294ffc114c92d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1/Avatar_Shieh/Head_b_metallic.png using Guid(2ef75489dda574346a294ffc114c92d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485ed297c6b35e781db0a8424fe437db') in 0.010140 seconds 
+  Import took 0.014009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.475153 seconds.
+  path: Assets/Scenes/Human-VS-Human.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Human-VS-Human.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5b844b11368ca61ac4955a38c394b22') in 0.003436 seconds 
+  Import took 0.008846 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007318 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.024 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1025ms)
+		BeginReloadAssembly (96ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (871ms)
+			LoadAssemblies (74ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (367ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (281ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.37 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.5 MB.
+System memory in use after: 118.7 MB.
+
+Unloading 55 unused Assets to reduce memory usage. Loaded Objects now: 2933.
+Total: 4.779300 ms (FindLiveObjects: 0.275400 ms CreateObjectMapping: 0.064300 ms MarkObjects: 4.378900 ms  DeleteObjects: 0.059600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 85.204264 seconds.
+  path: Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination
+  artifactKey: Guid(ce7a19faec8665c49b6fea06b6f84b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination using Guid(ce7a19faec8665c49b6fea06b6f84b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3d17cb226d65a9100e255d3e1242a8') in 0.008080 seconds 
+  Import took 0.012520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000567 seconds.
+  path: Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination
+  artifactKey: Guid(ce7a19faec8665c49b6fea06b6f84b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Tobii XR SDK/3.0.1/Hand-Eye Coordination using Guid(ce7a19faec8665c49b6fea06b6f84b70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3d17cb226d65a9100e255d3e1242a8') in 0.002009 seconds 
+  Import took 0.005896 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.591191 seconds.
+  path: Assets/ViveSR/Scenes/Eye/EyeSample_v2.unity
+  artifactKey: Guid(95faae79a7fda8248a4f435507170572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Scenes/Eye/EyeSample_v2.unity using Guid(95faae79a7fda8248a4f435507170572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba169e25b4612670f7bd6e048946ba6') in 0.012081 seconds 
+  Import took 0.015976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.759584 seconds.
+  path: Assets/ViveSR/Prefabs/DartBoard.prefab
+  artifactKey: Guid(52a2ca929ce44cb409714ebf1ead8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/DartBoard.prefab using Guid(52a2ca929ce44cb409714ebf1ead8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6a5c7e8e3e5753e46ba5a118d20e9c') in 0.123944 seconds 
+  Import took 0.128473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/ViveSR/Prefabs/Gaze Ray Sample v2.prefab
+  artifactKey: Guid(365dc3c335a5e88408e7792556958cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/Gaze Ray Sample v2.prefab using Guid(365dc3c335a5e88408e7792556958cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7238b4a02e51d99e852c932528628b5') in 0.013222 seconds 
+  Import took 0.018953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/ViveSR/Prefabs/SRanipal Eye Framework.prefab
+  artifactKey: Guid(f676e25d0fcd1ec4fa22af3017316de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/SRanipal Eye Framework.prefab using Guid(f676e25d0fcd1ec4fa22af3017316de9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f78e5d26b0e5aad3ae273fdb4e366a70') in 0.004860 seconds 
+  Import took 0.009732 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/ViveSR/Prefabs/Gaze Ray Sample.prefab
+  artifactKey: Guid(95145ad4fe8448d4ebdcf3760752e2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/Gaze Ray Sample.prefab using Guid(95145ad4fe8448d4ebdcf3760752e2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6f17845affcbd45a1d4f07300e972a5') in 0.012492 seconds 
+  Import took 0.016174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/ViveSR/Prefabs/DartBoard.prefab
+  artifactKey: Guid(52a2ca929ce44cb409714ebf1ead8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/DartBoard.prefab using Guid(52a2ca929ce44cb409714ebf1ead8332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6a5c7e8e3e5753e46ba5a118d20e9c') in 0.010847 seconds 
+  Import took 0.016817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/ViveSR/Prefabs/SRanipal Lip Framework.prefab
+  artifactKey: Guid(86d935e0d01acbe44887f792476d36e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/SRanipal Lip Framework.prefab using Guid(86d935e0d01acbe44887f792476d36e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7111c60a54ebbbce8ba58893967b9c6') in 0.004858 seconds 
+  Import took 0.008593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013651 seconds.
+  path: Assets/ViveSR/Prefabs/Gaze Ray Sample v2.prefab
+  artifactKey: Guid(365dc3c335a5e88408e7792556958cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/Gaze Ray Sample v2.prefab using Guid(365dc3c335a5e88408e7792556958cfc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7238b4a02e51d99e852c932528628b5') in 0.011361 seconds 
+  Import took 0.015703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.434694 seconds.
+  path: Assets/Scenes/Human-VS-Human.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Human-VS-Human.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14e0d5571bcc337a90950ba1267f7ec0') in 0.003944 seconds 
+  Import took 0.008354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.013217 seconds.
+  path: Assets/ViveSR/Prefabs
+  artifactKey: Guid(acc990d2ffc0f18408161a536d4d825a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs using Guid(acc990d2ffc0f18408161a536d4d825a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ae3aa92a32e0f7fe6c9f755f35b7c7') in 0.002861 seconds 
+  Import took 0.008011 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.154 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1155ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (976ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (314ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (407ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (307ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.24 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 118.8 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2940.
+Total: 3.721000 ms (FindLiveObjects: 0.303200 ms CreateObjectMapping: 0.071300 ms MarkObjects: 3.305800 ms  DeleteObjects: 0.039600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 72.631424 seconds.
+  path: Assets/Scenes/Human-VS-Human.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Human-VS-Human.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641ebabc0bf7ec1da0d93fc0ad993fd3') in 0.017494 seconds 
+  Import took 0.022009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 379.460734 seconds.
+  path: Assets/ViveSR/Models
+  artifactKey: Guid(374821dc3b435b5499b4d6686b52bb23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models using Guid(374821dc3b435b5499b4d6686b52bb23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf4244cce06835a4730acd45a5fade9') in 0.003597 seconds 
+  Import took 0.009740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.156055 seconds.
+  path: Assets/ViveSR/Models/version2
+  artifactKey: Guid(59ffb42580a221d489b4e4be0cd93b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2 using Guid(59ffb42580a221d489b4e4be0cd93b1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4e5ee88733d22c8919da14341480fea') in 0.002902 seconds 
+  Import took 0.007427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.114940 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Fairy
+  artifactKey: Guid(b1d7cc4f7c1fe894d909ba03357ff0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Fairy using Guid(b1d7cc4f7c1fe894d909ba03357ff0ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af417819ede7579d709bebe746d82e22') in 0.003386 seconds 
+  Import took 0.008078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.872521 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh
+  artifactKey: Guid(0fa541a2a1ad6544aae1ea7f8cd16192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh using Guid(0fa541a2a1ad6544aae1ea7f8cd16192) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b3fc52af8c9a552d0f15b7a5ead7d29') in 0.002702 seconds 
+  Import took 0.007459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.076087 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Avatar_Shieh_V2.fbx
+  artifactKey: Guid(cc2bd8780f283784899dcb72f2f7702f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Avatar_Shieh_V2.fbx using Guid(cc2bd8780f283784899dcb72f2f7702f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89524797c0f5ba0ef4782c5d02cf500a') in 0.248715 seconds 
+  Import took 0.253632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_albedo.png
+  artifactKey: Guid(3b6ef9709a877774fbbfad38f5140940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_albedo.png using Guid(3b6ef9709a877774fbbfad38f5140940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53473df3d14326dc846ce9a6d4a4ac39') in 0.016060 seconds 
+  Import took 0.020216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_ao.png
+  artifactKey: Guid(d5998c2461d92474ba2b82e867f88a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_ao.png using Guid(d5998c2461d92474ba2b82e867f88a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843a82224f3eaac031ffe8630c8d10db') in 0.010178 seconds 
+  Import took 0.014581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000718 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_normal.png
+  artifactKey: Guid(e535f3dc8af657843b83a1ba4a670c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_normal.png using Guid(e535f3dc8af657843b83a1ba4a670c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ea01de2acb4291a097febef4807839') in 0.010718 seconds 
+  Import took 0.014966 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_metallic.png
+  artifactKey: Guid(c87daa897a58c3540a5ca9dcc86faf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_metallic.png using Guid(c87daa897a58c3540a5ca9dcc86faf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982be43a515e9b97c911010190e8a834') in 0.011665 seconds 
+  Import took 0.016412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003270 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_normal.png
+  artifactKey: Guid(e535f3dc8af657843b83a1ba4a670c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Head_b_normal.png using Guid(e535f3dc8af657843b83a1ba4a670c6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ea01de2acb4291a097febef4807839') in 0.010424 seconds 
+  Import took 0.014467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.521050 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Fairy/Avatar_Fairy_V2.fbx
+  artifactKey: Guid(8e1afa1332038bd4cb15240270023176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Fairy/Avatar_Fairy_V2.fbx using Guid(8e1afa1332038bd4cb15240270023176) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc66ccd268a98554e40a6f39facc13c') in 0.064793 seconds 
+  Import took 0.069818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Fairy/fairy_body_Albedo.png
+  artifactKey: Guid(4139ef90b354b1a48a4505f2a13845d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Fairy/fairy_body_Albedo.png using Guid(4139ef90b354b1a48a4505f2a13845d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5342d66d2cdc891cecdc57b18090a4c') in 0.011827 seconds 
+  Import took 0.015362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.406136 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Materials
+  artifactKey: Guid(25f5f4cd0c785c548b187d0520afbe7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Materials using Guid(25f5f4cd0c785c548b187d0520afbe7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4739c8304bfa6176df1193ade30b1b5') in 0.003681 seconds 
+  Import took 0.008771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056011 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Materials/eyelash_mat.mat
+  artifactKey: Guid(ed4b25628f9822042ae28821748b430f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Materials/eyelash_mat.mat using Guid(ed4b25628f9822042ae28821748b430f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94796d9b553d450a41e4556e7614faf6') in 0.110174 seconds 
+  Import took 0.115060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/ViveSR/Models/version2/Avatar_Shieh/Materials/head_mat.mat
+  artifactKey: Guid(64185bf5c669e274ca89bb76c87d1429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version2/Avatar_Shieh/Materials/head_mat.mat using Guid(64185bf5c669e274ca89bb76c87d1429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '890aea8102b8e1075b29b087e45b4d2c') in 0.040507 seconds 
+  Import took 0.044819 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006645 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.191 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1192ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (999ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (297ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (449ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (346ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.47 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.3 MB.
+System memory in use after: 190.5 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2979.
+Total: 6.111900 ms (FindLiveObjects: 0.365500 ms CreateObjectMapping: 0.083200 ms MarkObjects: 5.610600 ms  DeleteObjects: 0.051200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 112.255194 seconds.
+  path: Assets/Scenes/Human-VS-Human.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Human-VS-Human.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd256751b73bf424d604c26be53ea3925') in 0.019235 seconds 
+  Import took 0.023562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 114.287743 seconds.
+  path: Assets/ViveSR/Models/version1
+  artifactKey: Guid(b9390d89dbbaea945a019d55040b0595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Models/version1 using Guid(b9390d89dbbaea945a019d55040b0595) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c8ebe09e968b8d2c4856844a945271') in 0.002744 seconds 
+  Import took 0.008004 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007142 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.061 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1062ms)
+		BeginReloadAssembly (106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (896ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (274ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (382ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.36 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.4 MB.
+System memory in use after: 190.6 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2984.
+Total: 3.907400 ms (FindLiveObjects: 0.375600 ms CreateObjectMapping: 0.073600 ms MarkObjects: 3.416800 ms  DeleteObjects: 0.040000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 416.178127 seconds.
+  path: Assets/ViveSR/Prefabs/Avatar Sample.prefab
+  artifactKey: Guid(b30a4057c9661044f8b9e9dfefbef322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ViveSR/Prefabs/Avatar Sample.prefab using Guid(b30a4057c9661044f8b9e9dfefbef322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49a684119efc959123a1ffbcfc5b61db') in 0.074242 seconds 
+  Import took 0.078840 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007768 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Fixing exec order for 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Tobii.XR.Internal.TobiiXR_ExecutionOrderValidator:.cctor () (at C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs:23)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: C:/TobiiXRSDK_3.0.1.179/Runtime/API/Internal/Editor/TobiiXR_ExecutionOrderValidator.cs Line: 23)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.926 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1928ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1724ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (390ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (881ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (169ms)
+				ProcessInitializeOnLoadAttributes (687ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.33 ms, found 15 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2450 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 190.4 MB.
+System memory in use after: 190.6 MB.
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2990.
+Total: 3.565600 ms (FindLiveObjects: 0.354000 ms CreateObjectMapping: 0.068900 ms MarkObjects: 3.110800 ms  DeleteObjects: 0.030800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
