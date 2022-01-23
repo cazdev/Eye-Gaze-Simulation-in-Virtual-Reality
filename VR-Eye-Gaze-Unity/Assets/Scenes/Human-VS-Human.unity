@@ -26411,12 +26411,10 @@ MonoBehaviour:
   _amplitude: 1
   _duration: 0.1
   indexFingerJoin1: {fileID: 1952545896}
-  indexFingerJoin2: {fileID: 1393681742}
   thumbFingerJoint1: {fileID: 1808226031}
   WhiteToken: {fileID: 692684106}
   BlackToken: {fileID: 1416168761}
   HighlightMat: {fileID: 2100000, guid: 895b63ec05efd504ea8f438c8b0fe105, type: 2}
-  isGrabbed: 0
 --- !u!1 &1518974902
 GameObject:
   m_ObjectHideFlags: 0
@@ -35796,7 +35794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013390461978}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DoorDouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36328,7 +36326,7 @@ GameObject:
   - component: {fileID: 95000011364150476}
   - component: {fileID: 114000012895350388}
   - component: {fileID: 114000009570592138}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PFB_DoorDouble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36515,7 +36513,7 @@ GameObject:
   - component: {fileID: 33000013592884722}
   - component: {fileID: 23000015479922794}
   - component: {fileID: 65000009617899388}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: rightDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37098,7 +37096,7 @@ GameObject:
   - component: {fileID: 33000015875989526}
   - component: {fileID: 23000012925725264}
   - component: {fileID: 65000012543806926}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: leftDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
