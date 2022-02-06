@@ -8,6 +8,7 @@ TagManager:
   - BlackToken
   - BlackTokenPile
   - GameBoardSquare
+  - WhiteTokenPile
   layers:
   - Default
   - TransparentFX
