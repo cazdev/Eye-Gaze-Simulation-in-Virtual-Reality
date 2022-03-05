@@ -16,14 +16,11 @@ public class SelectSquare : MonoBehaviour
     private bool isInsideGameSquare = false;
     private Vector3 gameSquarePos = new Vector3();
     PhotonView view;
-    PhotonTransformView transformView;
 
     // Start is called before the first frame update
     private void Start()
     {
         view = GetComponent<PhotonView>();
-        transformView = GetComponent<PhotonTransformView>();
-        transformView.enabled = false;
 
         if (action == null)
             return;
@@ -55,8 +52,6 @@ public class SelectSquare : MonoBehaviour
 
         // Clone token and place on game board square
         TokenClone = Instantiate(TokenCloneOnBoard);
-        // Enable the clone token on board
-        TokenCloneOnBoard.SetActive(true);
         // Move to palcement location
         TokenClone.transform.position = gameSquarePos;
 
