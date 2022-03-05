@@ -10,6 +10,7 @@ public class SelectSquare : MonoBehaviour
     public InputActionReference action;
     public Transform indexFingerJoin1;
     public Transform thumbFingerJoint1;
+    public GameObject TokenCloneOnBoard;
 
     private GameObject TokenClone;
     private bool isInsideGameSquare = false;
@@ -53,11 +54,9 @@ public class SelectSquare : MonoBehaviour
         isInsideGameSquare = false;
 
         // Clone token and place on game board square
-        TokenClone = Instantiate(this.gameObject);
-        // Stop this scrpit on placed token
-        TokenClone.GetComponent<SelectSquare>().enabled = false;
-        // Sync transform over network
-        TokenClone.GetComponent<PhotonTransformView>().enabled = true;
+        TokenClone = Instantiate(TokenCloneOnBoard);
+        // Enable the clone token on board
+        TokenCloneOnBoard.SetActive(true);
         // Move to palcement location
         TokenClone.transform.position = gameSquarePos;
 
