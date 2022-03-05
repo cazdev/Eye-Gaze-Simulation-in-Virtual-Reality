@@ -6360,7 +6360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4908386580033923641}
   - component: {fileID: 1024608920939510005}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Eye_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7363,7 +7363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2157156228596952495}
   - component: {fileID: 8211728173624786853}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9199,7 +9199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6793869174980596624}
   - component: {fileID: 464188235589104761}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf3D.Avatar_Renderer_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10658,7 +10658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7822356312068479100}
   - component: {fileID: 7210983525674834831}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Eye_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

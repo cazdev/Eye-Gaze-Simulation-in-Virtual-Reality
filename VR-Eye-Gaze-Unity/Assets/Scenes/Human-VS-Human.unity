@@ -2291,7 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f98453560004d46a90d9b5e4416ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondPlayerSpawnLocation: {fileID: 0}
+  secondPlayerSpawnLocation: {fileID: 693034823}
 --- !u!1 &229953366
 GameObject:
   m_ObjectHideFlags: 0
