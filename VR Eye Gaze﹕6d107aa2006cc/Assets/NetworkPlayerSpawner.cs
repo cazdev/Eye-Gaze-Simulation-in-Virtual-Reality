@@ -6,11 +6,18 @@ using Photon.Pun;
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
     private GameObject spawnedPlayerPrefab;
+    public Transform secondPlayerSpawnLocation;
 
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", transform.position, transform.rotation);
+        if (PhotonNetwork.CountOfPlayers == 1) {
+            spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", secondPlayerSpawnLocation.position, secondPlayerSpawnLocation.rotation);
+        }
+        else {
+            spawnedPlayerPrefab = PhotonNetwork.Instantiate("Network Player", transform.position, transform.rotation);
+        }
+        Debug.Log(PhotonNetwork.CountOfPlayers);
     }
 
     public override void OnLeftRoom()

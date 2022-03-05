@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Photon.Pun;
 
 public class SelectSquare : MonoBehaviour
 {
@@ -13,10 +14,16 @@ public class SelectSquare : MonoBehaviour
     private GameObject TokenClone;
     private bool isInsideGameSquare = false;
     private Vector3 gameSquarePos = new Vector3();
+    PhotonView view;
+    PhotonTransformView transformView;
 
     // Start is called before the first frame update
     private void Start()
     {
+        view = GetComponent<PhotonView>();
+        transformView = GetComponent<PhotonTransformView>();
+        transformView.enabled = false;
+
         if (action == null)
             return;
 
@@ -31,23 +38,35 @@ public class SelectSquare : MonoBehaviour
             // Check hand is inside pile
             if (isInsideGameSquare && GrabToken.isGrabbed)
             {
-                // Make sure token is not grabbed anymore
-                GrabToken.isGrabbed = false;
-                isInsideGameSquare = false;
-
-                // Clone token and place on game board square
-                TokenClone = Instantiate(this.gameObject);
-                TokenClone.GetComponent<SelectSquare>().enabled = false;
-                TokenClone.transform.position = gameSquarePos;
-
-                // Undo flexed fingers
-                indexFingerJoin1.Rotate(-55, 0, 0);
-                thumbFingerJoint1.Rotate(-30, 0, 0);
-
-                // Disable/Hide this token in hand
-                this.gameObject.SetActive(false);
+                // Place on to gameboard
+                //PlaceOnGameboard();
+                view.RPC("PlaceOnGameboard", RpcTarget.All);
             }
         };
+    }
+
+    [PunRPC]
+    void PlaceOnGameboard()
+    {
+        // Make sure token is not grabbed anymore
+        GrabToken.isGrabbed = false;
+        isInsideGameSquare = false;
+
+        // Clone token and place on game board square
+        TokenClone = Instantiate(this.gameObject);
+        // Stop this scrpit on placed token
+        TokenClone.GetComponent<SelectSquare>().enabled = false;
+        // Sync transform over network
+        TokenClone.GetComponent<PhotonTransformView>().enabled = true;
+        // Move to palcement location
+        TokenClone.transform.position = gameSquarePos;
+
+        // Undo flexed fingers
+        indexFingerJoin1.Rotate(-55, 0, 0);
+        thumbFingerJoint1.Rotate(-30, 0, 0);
+
+        // Disable/Hide this token in hand
+        this.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Photon.Pun;
 
 namespace ViveSR
 {
@@ -27,6 +28,8 @@ namespace ViveSR
                 /// </summary>
                 [SerializeField] private AnimationCurve EyebrowAnimationCurveHorizontal;
 
+                PhotonView view;
+
                 public bool NeededToGetData = true;
                 private Dictionary<EyeShape_v2, float> EyeWeightings = new Dictionary<EyeShape_v2, float>();
                 private AnimationCurve[] EyebrowAnimationCurves = new AnimationCurve[(int)EyeShape_v2.Max];
@@ -36,6 +39,8 @@ namespace ViveSR
                 private bool eye_callback_registered = false;
                 private void Start()
                 {
+                    view = GetComponent<PhotonView>();
+
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
                     {
                         enabled = false;
@@ -57,74 +62,78 @@ namespace ViveSR
 
                 private void Update()
                 {
-                    if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING &&
+                    if (view.IsMine)
+                    {
+                        if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING &&
                         SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT) return;
 
-                    if (NeededToGetData)
-                    {
-                        if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == true && eye_callback_registered == false)
+                        if (NeededToGetData)
                         {
-                            SRanipal_Eye_v2.WrapperRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye_v2.CallbackBasic)EyeCallback));
-                            eye_callback_registered = true;
-                        }
-                        else if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == false && eye_callback_registered == true)
-                        {
-                            SRanipal_Eye_v2.WrapperUnRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye_v2.CallbackBasic)EyeCallback));
-                            eye_callback_registered = false;
-                        }
-                        else if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == false)
-                            SRanipal_Eye_API.GetEyeData_v2(ref eyeData);
-
-                        bool isLeftEyeActive = false;
-                        bool isRightEyeAcitve = false;
-                        if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.WORKING)
-                        {
-                            isLeftEyeActive = eyeData.no_user; 
-                            isRightEyeAcitve = eyeData.no_user;
-                        }
-                        else if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT)
-                        {
-                            isLeftEyeActive = true;
-                            isRightEyeAcitve = true;
-                        }
-
-                        if (isLeftEyeActive || isRightEyeAcitve)
-                        {
-                            if (eye_callback_registered == true)
-                                SRanipal_Eye_v2.GetEyeWeightings(out EyeWeightings, eyeData);
-                            else
-                                SRanipal_Eye_v2.GetEyeWeightings(out EyeWeightings);
-                            UpdateEyeShapes(EyeWeightings);
-                        }
-                        else
-                        {
-                            for (int i = 0; i < (int)EyeShape_v2.Max; ++i)
+                            if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == true && eye_callback_registered == false)
                             {
-                                bool isBlink = ((EyeShape_v2)i == EyeShape_v2.Eye_Left_Blink || (EyeShape_v2)i == EyeShape_v2.Eye_Right_Blink);
-                                EyeWeightings[(EyeShape_v2)i] = isBlink ? 1 : 0;
+                                SRanipal_Eye_v2.WrapperRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye_v2.CallbackBasic)EyeCallback));
+                                eye_callback_registered = true;
+                            }
+                            else if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == false && eye_callback_registered == true)
+                            {
+                                SRanipal_Eye_v2.WrapperUnRegisterEyeDataCallback(Marshal.GetFunctionPointerForDelegate((SRanipal_Eye_v2.CallbackBasic)EyeCallback));
+                                eye_callback_registered = false;
+                            }
+                            else if (SRanipal_Eye_Framework.Instance.EnableEyeDataCallback == false)
+                                SRanipal_Eye_API.GetEyeData_v2(ref eyeData);
+
+                            bool isLeftEyeActive = false;
+                            bool isRightEyeAcitve = false;
+                            if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.WORKING)
+                            {
+                                isLeftEyeActive = eyeData.no_user;
+                                isRightEyeAcitve = eyeData.no_user;
+                            }
+                            else if (SRanipal_Eye_Framework.Status == SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT)
+                            {
+                                isLeftEyeActive = true;
+                                isRightEyeAcitve = true;
                             }
 
-                            UpdateEyeShapes(EyeWeightings);
+                            if (isLeftEyeActive || isRightEyeAcitve)
+                            {
+                                if (eye_callback_registered == true)
+                                    SRanipal_Eye_v2.GetEyeWeightings(out EyeWeightings, eyeData);
+                                else
+                                    SRanipal_Eye_v2.GetEyeWeightings(out EyeWeightings);
+                                UpdateEyeShapes(EyeWeightings);
+                            }
+                            else
+                            {
+                                for (int i = 0; i < (int)EyeShape_v2.Max; ++i)
+                                {
+                                    bool isBlink = ((EyeShape_v2)i == EyeShape_v2.Eye_Left_Blink || (EyeShape_v2)i == EyeShape_v2.Eye_Right_Blink);
+                                    EyeWeightings[(EyeShape_v2)i] = isBlink ? 1 : 0;
+                                }
 
-                            return;
-                        }
+                                UpdateEyeShapes(EyeWeightings);
 
-                        Vector3 GazeOriginCombinedLocal, GazeDirectionCombinedLocal = Vector3.zero;
-                        if (eye_callback_registered == true)
-                        {
-                            if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.COMBINE, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
-                            else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.LEFT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
-                            else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.RIGHT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
-                        }
-                        else
-                        {
-                            if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.COMBINE, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
-                            else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.LEFT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
-                            else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.RIGHT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
+                                return;
+                            }
 
+                            Vector3 GazeOriginCombinedLocal, GazeDirectionCombinedLocal = Vector3.zero;
+                            if (eye_callback_registered == true)
+                            {
+                                if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.COMBINE, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
+                                else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.LEFT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
+                                else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.RIGHT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal, eyeData)) { }
+                            }
+                            else
+                            {
+                                if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.COMBINE, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
+                                else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.LEFT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
+                                else if (SRanipal_Eye_v2.GetGazeRay(GazeIndex.RIGHT, out GazeOriginCombinedLocal, out GazeDirectionCombinedLocal)) { }
+
+                            }
+                            UpdateGazeRay(GazeDirectionCombinedLocal);
                         }
-                        UpdateGazeRay(GazeDirectionCombinedLocal);
                     }
+
                 }
                 private void Release()
                 {
