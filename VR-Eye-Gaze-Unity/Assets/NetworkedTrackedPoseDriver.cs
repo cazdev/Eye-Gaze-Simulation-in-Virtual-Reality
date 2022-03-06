@@ -187,13 +187,10 @@ namespace UnityEngine.InputSystem.XR
 
         protected void UpdateCallback()
         {
-            if (view.IsMine)
-            {
-                if (InputState.currentUpdateType == InputUpdateType.BeforeRender)
-                    OnBeforeRender();
-                else
-                    OnUpdate();
-            }
+            if (InputState.currentUpdateType == InputUpdateType.BeforeRender)
+                OnBeforeRender();
+            else
+                OnUpdate();
         }
 
         protected virtual void OnUpdate()
@@ -216,16 +213,19 @@ namespace UnityEngine.InputSystem.XR
 
         protected virtual void SetLocalTransform(Vector3 newPosition, Quaternion newRotation)
         {
-            if (m_TrackingType == TrackingType.RotationAndPosition ||
-                m_TrackingType == TrackingType.RotationOnly)
+            if (view.IsMine)
             {
-                transform.localRotation = newRotation;
-            }
+                if (m_TrackingType == TrackingType.RotationAndPosition ||
+                    m_TrackingType == TrackingType.RotationOnly)
+                {
+                    transform.localRotation = newRotation;
+                }
 
-            if (m_TrackingType == TrackingType.RotationAndPosition ||
-                m_TrackingType == TrackingType.PositionOnly)
-            {
-                transform.localPosition = newPosition;
+                if (m_TrackingType == TrackingType.RotationAndPosition ||
+                    m_TrackingType == TrackingType.PositionOnly)
+                {
+                    transform.localPosition = newPosition;
+                }
             }
         }
 
