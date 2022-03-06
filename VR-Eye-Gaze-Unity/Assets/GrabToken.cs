@@ -16,8 +16,12 @@ public class GrabToken : MonoBehaviour
 
     public Material HighlightMat;
 
-    public static bool isGrabbed = false;
+    public static bool IsGrabbed = false;
+    public static bool GrabbedBlackToken = false;
+    public static bool GrabbedWhiteToken = false;
+
     private bool isInsideBlackPile = false;
+    private bool isInsideWhitePile = false;
 
     private void Start()
     {
@@ -37,34 +41,49 @@ public class GrabToken : MonoBehaviour
             if (isInsideBlackPile)
             {
                 // Grabbing a token with fingers
-                if (isGrabbed)
+                if (IsGrabbed)
                 {
-                    isGrabbed = false;
+                    IsGrabbed = false;
 
-                    Debug.Log("Rotation finger:  index: " + indexFingerJoin1.rotation.x);
-                    Debug.Log("Rotation finger:  thumb: " + indexFingerJoin1.rotation.x);
                     // Undo flexed fingers
                     indexFingerJoin1.Rotate(-55, 0, 0);
                     thumbFingerJoint1.Rotate(-30, 0, 0);
-                    Debug.Log("Done Rotating finger:  index: " + indexFingerJoin1.rotation.x);
-                    Debug.Log("Done Rotating finger:  thumb: " + indexFingerJoin1.rotation.x);
                     // Hide the token
                     BlackToken.SetActive(false);
                 }
                 else
                 {
-                    isGrabbed = true;
+                    IsGrabbed = true;
                     // Flex fingers in to grab token
-                    Debug.Log("Rotation finger:  index: " + indexFingerJoin1.rotation.x);
-                    Debug.Log("Rotation finger:  thumb: " + indexFingerJoin1.rotation.x);
                     indexFingerJoin1.Rotate(55, 0, 0);
                     thumbFingerJoint1.Rotate(30, 0, 0);
-                    Debug.Log("Done Rotating finger:  index: " + indexFingerJoin1.rotation.x);
-                    Debug.Log("Done Rotating finger:  thumb: " + indexFingerJoin1.rotation.x);
                     // Show the token
                     BlackToken.SetActive(true);
                 }
             }
+            else if (isInsideWhitePile)
+                {
+                    // Grabbing a token with fingers
+                    if (IsGrabbed)
+                    {
+                        IsGrabbed = false;
+
+                        // Undo flexed fingers
+                        indexFingerJoin1.Rotate(-55, 0, 0);
+                        thumbFingerJoint1.Rotate(-30, 0, 0);
+                        // Hide the token
+                        WhiteToken.SetActive(false);
+                    }
+                    else
+                    {
+                        IsGrabbed = true;
+                        // Flex fingers in to grab token
+                        indexFingerJoin1.Rotate(55, 0, 0);
+                        thumbFingerJoint1.Rotate(30, 0, 0);
+                        // Show the token
+                        WhiteToken.SetActive(true);
+                    }
+                }
         };
     }
 
@@ -74,7 +93,13 @@ public class GrabToken : MonoBehaviour
         {
             isInsideBlackPile = true;
             other.gameObject.GetComponent<MeshRenderer>().material = HighlightMat;
+        } 
+        else if (other.gameObject.tag == "WhiteTokenPile")
+        {
+            isInsideWhitePile = true;
+            other.gameObject.GetComponent<MeshRenderer>().material = HighlightMat;
         }
+
     }
 
     void OnTriggerExit(Collider other)
@@ -82,6 +107,13 @@ public class GrabToken : MonoBehaviour
         if (other.gameObject.tag == "BlackTokenPile")
         {
             isInsideBlackPile = false;
+            GrabbedBlackToken = true;
+            other.gameObject.GetComponent<MeshRenderer>().material.color = Color.clear; ;
+        }
+        else if (other.gameObject.tag == "WhiteTokenPile")
+        {
+            isInsideWhitePile = false;
+            GrabbedWhiteToken = true;
             other.gameObject.GetComponent<MeshRenderer>().material.color = Color.clear; ;
         }
     }

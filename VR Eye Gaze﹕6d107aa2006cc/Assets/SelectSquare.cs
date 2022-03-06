@@ -10,12 +10,11 @@ public class SelectSquare : MonoBehaviour
     public InputActionReference action;
     public Transform indexFingerJoin1;
     public Transform thumbFingerJoint1;
-    public GameObject TokenCloneOnBoard;
 
-    private GameObject TokenClone;
     private bool isInsideGameSquare = false;
     private Vector3 gameSquarePos = new Vector3();
     PhotonView view;
+    public LogFile log;
 
     // Start is called before the first frame update
     private void Start()
@@ -34,27 +33,39 @@ public class SelectSquare : MonoBehaviour
             //rumble.SendImpulse(_amplitude, _duration);
 
             // Check hand is inside pile
-            if (isInsideGameSquare && GrabToken.isGrabbed)
+            if (isInsideGameSquare && GrabToken.IsGrabbed)
             {
                 // Place on to gameboard
-                //PlaceOnGameboard();
-                view.RPC("PlaceOnGameboard", RpcTarget.All);
+                PlaceOnGameboard();
+                //view.RPC("PlaceOnGameboard", RpcTarget.All);
             }
         };
     }
 
-    [PunRPC]
+    //[PunRPC]
     void PlaceOnGameboard()
     {
         // Make sure token is not grabbed anymore
-        GrabToken.isGrabbed = false;
+        GrabToken.IsGrabbed = false;
         isInsideGameSquare = false;
 
-        // Clone token and place on game board square
-        TokenClone = Instantiate(TokenCloneOnBoard);
-        // Move to palcement location
-        TokenClone.transform.position = gameSquarePos;
-        PhotonNetwork.Instantiate("TokenClone", gameSquarePos, Quaternion.identity, 0);
+        if (GrabToken.GrabbedBlackToken)
+        {
+            // Clone token and place on game board square
+            PhotonNetwork.Instantiate("TokenClone Black", gameSquarePos, Quaternion.identity, 0);
+            GrabToken.GrabbedBlackToken = false;
+        } 
+        else if (GrabToken.GrabbedWhiteToken) {
+            // Clone token and place on game board square
+            PhotonNetwork.Instantiate("TokenClone White", gameSquarePos, Quaternion.identity, 0);
+            GrabToken.GrabbedWhiteToken = false;
+        }
+
+        if (log != null)
+        {
+            // write the time and the players x and y positions to the file
+            log.WriteLine(Time.time, "Token Placed");
+        }
 
         // Undo flexed fingers
         indexFingerJoin1.Rotate(-55, 0, 0);

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7861271737162425624}
   - component: {fileID: 5263119432543580823}
   m_Layer: 0
-  m_Name: TokenOnBoard
+  m_Name: TokenOnBoard (Black)
   m_TagString: BlackToken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
