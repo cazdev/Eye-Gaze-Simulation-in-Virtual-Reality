@@ -220,3 +220,7 @@ OnPrimaryEnterPlayMode﹕
 OnPrimaryExitPlayMode﹕
 OnPrimaryAssetsChanged﹕
 OnPrimaryAssetsChanged﹕
+OnPrimaryEnterPlayMode﹕
+OnPrimaryExitPlayMode﹕
+OnPrimaryAssetsChanged﹕
+OnPrimaryAssetsChanged﹕

@@ -51,10 +51,10 @@ public class SelectSquare : MonoBehaviour
         isInsideGameSquare = false;
 
         // Clone token and place on game board square
-        //TokenClone = Instantiate(TokenCloneOnBoard);
-        PhotonNetwork.Instantiate("TokenClone", TokenClone.transform.position, Quaternion.identity, 0);
+        TokenClone = Instantiate(TokenCloneOnBoard);
         // Move to palcement location
-        //TokenClone.transform.position = gameSquarePos;
+        TokenClone.transform.position = gameSquarePos;
+        PhotonNetwork.Instantiate("TokenClone", gameSquarePos, Quaternion.identity, 0);
 
         // Undo flexed fingers
         indexFingerJoin1.Rotate(-55, 0, 0);
