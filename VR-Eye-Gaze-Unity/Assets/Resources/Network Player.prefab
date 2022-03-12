@@ -1263,8 +1263,6 @@ MonoBehaviour:
   action: {fileID: 6986180202050166755, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   indexFingerJoin1: {fileID: 1133128334201832}
   thumbFingerJoint1: {fileID: 2885338874752059605}
-  TokenCloneOnBoard: {fileID: 7435614371138340221, guid: 61890ee0f241c5b4d95bba72adf8fd9e,
-    type: 3}
   log: {fileID: 5589355761261139564}
 --- !u!114 &96952991882324437
 MonoBehaviour:
@@ -11443,8 +11441,6 @@ MonoBehaviour:
   action: {fileID: 6986180202050166755, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   indexFingerJoin1: {fileID: 1133128334201832}
   thumbFingerJoint1: {fileID: 2885338874752059605}
-  TokenCloneOnBoard: {fileID: 4740160166527734207, guid: b379df5dc94da324f8a1d733fecdc0b5,
-    type: 3}
   log: {fileID: 5589355761261139564}
 --- !u!114 &1096560964404336211
 MonoBehaviour:

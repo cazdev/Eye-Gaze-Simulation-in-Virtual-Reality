@@ -392,3 +392,8 @@ OnPrimaryAssetsChanged﹕
 OnPrimaryAssetsChanged﹕
 OnPrimaryAssetsChanged﹕
 OnPrimaryEnterPlayMode﹕
+OnPrimaryExitPlayMode﹕
+OnPrimaryEnterPlayMode﹕
+OnPrimaryExitPlayMode﹕
+OnPrimaryAssetsChanged﹕
+OnPrimaryAssetsChanged﹕
