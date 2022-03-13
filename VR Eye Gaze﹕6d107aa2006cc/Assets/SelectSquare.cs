@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Photon.Pun;
+using TMPro;
 
 public class SelectSquare : MonoBehaviour
 {
@@ -15,10 +16,12 @@ public class SelectSquare : MonoBehaviour
     private Vector3 gameSquarePos = new Vector3();
     PhotonView view;
     public LogFile log;
+    private TextMeshProUGUI PlayerTurnText;
 
     // Start is called before the first frame update
     private void Start()
     {
+        PlayerTurnText = GameObject.Find("PlayerTurnText (TMP)").GetComponent<TextMeshProUGUI>();
         view = GetComponent<PhotonView>();
 
         if (action == null)
@@ -54,11 +57,13 @@ public class SelectSquare : MonoBehaviour
             // Clone token and place on game board square
             PhotonNetwork.Instantiate("TokenClone Black", gameSquarePos, Quaternion.identity, 0);
             GrabToken.GrabbedBlackToken = false;
+            PlayerTurnText.SetText("PlayerTurn: White");
         } 
         else if (GrabToken.GrabbedWhiteToken) {
             // Clone token and place on game board square
             PhotonNetwork.Instantiate("TokenClone White", gameSquarePos, Quaternion.identity, 0);
             GrabToken.GrabbedWhiteToken = false;
+            PlayerTurnText.SetText("PlayerTurn: Black");
         }
 
         if (log != null)

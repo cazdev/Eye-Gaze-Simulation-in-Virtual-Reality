@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,8 +24,12 @@ public class GrabToken : MonoBehaviour
     private bool isInsideBlackPile = false;
     private bool isInsideWhitePile = false;
 
+    private TextMeshProUGUI IsGameStartedText;
+
     private void Start()
     {
+        IsGameStartedText = GameObject.Find("IsGameStartedText (TMP)").GetComponent<TextMeshProUGUI>();
+
         if (action == null)
             return;
 
@@ -53,6 +58,7 @@ public class GrabToken : MonoBehaviour
                 }
                 else
                 {
+                    IsGameStartedText.SetText("IsGameStarted: True");
                     IsGrabbed = true;
                     // Flex fingers in to grab token
                     indexFingerJoin1.Rotate(55, 0, 0);
@@ -76,6 +82,7 @@ public class GrabToken : MonoBehaviour
                     }
                     else
                     {
+                        IsGameStartedText.SetText("IsGameStarted: True");
                         IsGrabbed = true;
                         // Flex fingers in to grab token
                         indexFingerJoin1.Rotate(55, 0, 0);

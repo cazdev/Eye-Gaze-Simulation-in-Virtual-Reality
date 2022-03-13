@@ -1,5 +1,6 @@
 ﻿//========= Copyright 2018, HTC Corporation. All rights reserved. ===========
 using System.Runtime.InteropServices;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -16,8 +17,12 @@ namespace ViveSR
                 private static EyeData_v2 eyeData = new EyeData_v2();
                 private bool eye_callback_registered = false;
                 LogFile log;
+                private TextMeshProUGUI EyeGazeVectorText;
+
                 private void Start()
                 {
+                    EyeGazeVectorText = GameObject.Find("EyeGazeVectorText (TMP)").GetComponent<TextMeshProUGUI>();
+
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
                     {
                         enabled = false;
@@ -67,6 +72,7 @@ namespace ViveSR
                     {
                         log.WriteLine(Time.time, GazeDirectionCombined);
                     }
+                    EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
                 }
                 private void Release()
                 {
