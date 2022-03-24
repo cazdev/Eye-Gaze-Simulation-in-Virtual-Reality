@@ -21,6 +21,8 @@ TagManager:
   - Torso
   - Arms
   - RightHand
+  - Chair
+  - LeftHand
   layers:
   - Default
   - TransparentFX

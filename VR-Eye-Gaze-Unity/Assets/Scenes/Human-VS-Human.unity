@@ -2640,7 +2640,7 @@ GameObject:
   - component: {fileID: 64000014138218724}
   m_Layer: 0
   m_Name: PFB_DiningChair (1)
-  m_TagString: Untagged
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4189,7 +4189,7 @@ GameObject:
   - component: {fileID: 64000012262633860}
   m_Layer: 0
   m_Name: PFB_DiningChair (3)
-  m_TagString: Untagged
+  m_TagString: Chair
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
