@@ -38,6 +38,7 @@ public class GenerateGameBoard : MonoBehaviour
                 {
                     if (isAlternateTile)
                     {
+                        TileSquare1.tag = column + "," + row;
                         Instantiate(
                             TileSquare1,
                             new Vector3(row * 0.03f, 0, column * 0.03f) + StartPos.position,
@@ -47,6 +48,7 @@ public class GenerateGameBoard : MonoBehaviour
                     }
                     else
                     {
+                        TileSquare2.tag = "GameboardSquare-" + column + "," + row;
                         Instantiate(
                             TileSquare2,
                             new Vector3(row * 0.03f, 0, column * 0.03f) + StartPos.position,

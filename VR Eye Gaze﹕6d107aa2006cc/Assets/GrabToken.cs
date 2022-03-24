@@ -21,8 +21,12 @@ public class GrabToken : MonoBehaviour
     public static bool GrabbedBlackToken = false;
     public static bool GrabbedWhiteToken = false;
 
+    public LogFile log;
+
     private bool isInsideBlackPile = false;
     private bool isInsideWhitePile = false;
+
+    private bool isGameStarted = false;
 
     private TextMeshProUGUI IsGameStartedText;
 
@@ -42,6 +46,13 @@ public class GrabToken : MonoBehaviour
 
             //rumble.SendImpulse(_amplitude, _duration);
 
+            if (log != null && !isGameStarted && (isInsideBlackPile || isInsideWhitePile))
+            {
+                IsGameStartedText.SetText("IsGameStarted: True");
+                isGameStarted = true;
+                log.WriteLine(Time.time, "event_game_started");
+            }
+
             // Check hand is inside pile
             if (isInsideBlackPile)
             {
@@ -58,7 +69,10 @@ public class GrabToken : MonoBehaviour
                 }
                 else
                 {
-                    IsGameStartedText.SetText("IsGameStarted: True");
+                    if (log != null)
+                    {
+                        log.WriteLine(Time.time, "event_token_grabbed_black");
+                    }
                     IsGrabbed = true;
                     // Flex fingers in to grab token
                     indexFingerJoin1.Rotate(55, 0, 0);
@@ -82,7 +96,10 @@ public class GrabToken : MonoBehaviour
                     }
                     else
                     {
-                        IsGameStartedText.SetText("IsGameStarted: True");
+                        if (log != null)
+                        {
+                            log.WriteLine(Time.time, "event_token_grabbed_white");
+                        }
                         IsGrabbed = true;
                         // Flex fingers in to grab token
                         indexFingerJoin1.Rotate(55, 0, 0);

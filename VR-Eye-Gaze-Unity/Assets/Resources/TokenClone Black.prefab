@@ -65,7 +65,12 @@ PrefabInstance:
     - target: {fileID: 4740160166527734207, guid: b379df5dc94da324f8a1d733fecdc0b5,
         type: 3}
       propertyPath: m_Name
-      value: TokenClone
+      value: TokenClone Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740160166527734207, guid: b379df5dc94da324f8a1d733fecdc0b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: BlackTokenOnBoard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b379df5dc94da324f8a1d733fecdc0b5, type: 3}

@@ -16,7 +16,8 @@ namespace ViveSR
                 [SerializeField] private LineRenderer GazeRayRenderer;
                 private static EyeData_v2 eyeData = new EyeData_v2();
                 private bool eye_callback_registered = false;
-                LogFile log;
+                public LogFile log;
+                public LogFile logCollisions;
                 private TextMeshProUGUI EyeGazeVectorText;
 
                 private void Start()
@@ -68,11 +69,37 @@ namespace ViveSR
                     GazeRayRenderer.SetPosition(0, Camera.main.transform.position - Camera.main.transform.up * 0.05f);
                     GazeRayRenderer.SetPosition(1, Camera.main.transform.position + GazeDirectionCombined * LengthOfRay);
 
+                    // Calculate direction from these 2 points
+                    Vector3 fromPosition = Camera.main.transform.position - Camera.main.transform.up * 0.05f;
+                    Vector3 toPosition = Camera.main.transform.position + GazeDirectionCombined * LengthOfRay;
+                    Vector3 direction = toPosition - fromPosition;
+
                     if (log != null)
                     {
-                        log.WriteLine(Time.time, GazeDirectionCombined);
+                        log.WriteLine(Time.time, GazeDirectionCombined.x, GazeDirectionCombined.y, GazeDirectionCombined.z);
                     }
                     EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
+
+                    RaycastHit hitPoint;
+                    Ray ray = new Ray(fromPosition, direction);
+                    if (Physics.Raycast(ray, out hitPoint, Mathf.Infinity))
+                    {
+                        // Convert from world space to local
+                        var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
+
+                        // Get collisions
+                        if (logCollisions != null)
+                        {
+                            if (hitPoint.collider.tag != "Untagged")
+                            {
+                                logCollisions.WriteLine(Time.time, "event_looked_at_"+hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z);
+                            }
+                        }
+                        else
+                        {
+                            // No hits
+                        }
+                    }
                 }
                 private void Release()
                 {

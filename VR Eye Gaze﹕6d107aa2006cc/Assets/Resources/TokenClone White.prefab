@@ -72,5 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TokenClone White
       objectReference: {fileID: 0}
+    - target: {fileID: 6983795561449181562, guid: 4e4d187a233c4e04f98e08e6207037f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: WhiteTokenOnBoard
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e4d187a233c4e04f98e08e6207037f4, type: 3}

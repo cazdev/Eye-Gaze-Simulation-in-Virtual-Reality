@@ -77,6 +77,8 @@ namespace UnityEngine.InputSystem.XR
             }
         }
 
+        public LogFile log;
+
         Vector3 m_CurrentPosition = Vector3.zero;
         Quaternion m_CurrentRotation = Quaternion.identity;
         bool m_RotationBound = false;
@@ -219,6 +221,10 @@ namespace UnityEngine.InputSystem.XR
                     m_TrackingType == TrackingType.RotationOnly)
                 {
                     transform.localRotation = newRotation;
+                    if (log != null)
+                    {
+                        log.WriteLine(Time.time, transform.localRotation.x, transform.localRotation.y, transform.localRotation.z);
+                    }
                 }
 
                 if (m_TrackingType == TrackingType.RotationAndPosition ||

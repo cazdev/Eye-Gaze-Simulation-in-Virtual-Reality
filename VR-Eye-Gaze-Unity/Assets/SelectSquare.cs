@@ -58,18 +58,22 @@ public class SelectSquare : MonoBehaviour
             PhotonNetwork.Instantiate("TokenClone Black", gameSquarePos, Quaternion.identity, 0);
             GrabToken.GrabbedBlackToken = false;
             PlayerTurnText.SetText("PlayerTurn: White");
+            if (log != null)
+            {
+                // write the time and the players x and y positions to the file
+                log.WriteLine(Time.time, "event_token_placed_black");
+            }
         } 
         else if (GrabToken.GrabbedWhiteToken) {
             // Clone token and place on game board square
             PhotonNetwork.Instantiate("TokenClone White", gameSquarePos, Quaternion.identity, 0);
             GrabToken.GrabbedWhiteToken = false;
             PlayerTurnText.SetText("PlayerTurn: Black");
-        }
-
-        if (log != null)
-        {
-            // write the time and the players x and y positions to the file
-            log.WriteLine(Time.time, "Token Placed");
+            if (log != null)
+            {
+                // write the time and the players x and y positions to the file
+                log.WriteLine(Time.time, "event_token_placed_white");
+            }
         }
 
         // Undo flexed fingers

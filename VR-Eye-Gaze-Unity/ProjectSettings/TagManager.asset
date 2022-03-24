@@ -9,6 +9,18 @@ TagManager:
   - BlackTokenPile
   - GameBoardSquare
   - WhiteTokenPile
+  - Roof
+  - Floor
+  - BackWall
+  - Gameboard
+  - Table
+  - BlackTokenOnBoard
+  - WhiteTokenOnBoard
+  - LowerHead
+  - UpperHead
+  - Torso
+  - Arms
+  - RightHand
   layers:
   - Default
   - TransparentFX

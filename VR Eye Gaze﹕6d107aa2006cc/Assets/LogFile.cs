@@ -66,7 +66,6 @@ public class LogFile : MonoBehaviour {
 		if (args.Length != headers.Length) {
 			Debug.LogError("Unexpected number of arguments to LogFile.WriteLine");
 		}
-		Debug.Log(args);
 		log.WriteLine(lineFormat, args);
 		log.Flush();
 	}
