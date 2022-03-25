@@ -23,6 +23,10 @@ TagManager:
   - RightHand
   - Chair
   - LeftHand
+  - UpperRightArm
+  - LowerRightArm
+  - UpperLefttArm
+  - LowerLeftArm
   layers:
   - Default
   - TransparentFX
