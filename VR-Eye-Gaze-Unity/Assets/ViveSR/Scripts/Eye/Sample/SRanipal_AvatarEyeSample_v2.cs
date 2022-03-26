@@ -30,6 +30,7 @@ namespace ViveSR
 
                 PhotonView view;
 
+                public Transform headTransform;
                 public bool NeededToGetData = true;
                 private Dictionary<EyeShape_v2, float> EyeWeightings = new Dictionary<EyeShape_v2, float>();
                 private AnimationCurve[] EyebrowAnimationCurves = new AnimationCurve[(int)EyeShape_v2.Max];
@@ -242,7 +243,7 @@ namespace ViveSR
                     {
                         EyeAnchors[i] = new GameObject();
                         EyeAnchors[i].name = "EyeAnchor_" + i;
-                        EyeAnchors[i].transform.SetParent(gameObject.transform);
+                        EyeAnchors[i].transform.SetParent(headTransform);
                         EyeAnchors[i].transform.localPosition = EyesModels[i].localPosition;
                         EyeAnchors[i].transform.localRotation = EyesModels[i].localRotation;
                         EyeAnchors[i].transform.localScale = EyesModels[i].localScale;
