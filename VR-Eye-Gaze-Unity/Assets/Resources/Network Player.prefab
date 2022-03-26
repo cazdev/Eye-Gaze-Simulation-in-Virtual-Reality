@@ -9126,6 +9126,7 @@ GameObject:
   - component: {fileID: 5051193047150873309}
   - component: {fileID: 5878459060310873636}
   - component: {fileID: 1380706124905232478}
+  - component: {fileID: 1261832401663516897}
   m_Layer: 0
   m_Name: RightEye
   m_TagString: Untagged
@@ -9168,6 +9169,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1380706124905232478}
+  - {fileID: 1261832401663516897}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -9178,7 +9180,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4981642470707786538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8efc6b1d64977384eb3405357896c656, type: 3}
   m_Name: 
@@ -9204,6 +9206,22 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &1261832401663516897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4981642470707786538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 0
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 0
 --- !u!1 &4991302693597626165
 GameObject:
   m_ObjectHideFlags: 0
@@ -15393,7 +15411,7 @@ MonoBehaviour:
   m_SynchronizePosition: 0
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_UseLocal: 0
 --- !u!1 &8179657912473806304
 GameObject:
   m_ObjectHideFlags: 0
@@ -18180,26 +18198,6 @@ MonoBehaviour:
   - x
   - y
   - z
---- !u!114 &3812850199446541772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8336110269107399505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6faa8e84f49815e4ab64b7668301ae06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  namePrevix: looking_at_objects
-  nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
-  headers:
-  - time
-  - object
-  - x
-  - y
-  - z
 --- !u!114 &1579664201589497306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18222,6 +18220,26 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &3812850199446541772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336110269107399505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6faa8e84f49815e4ab64b7668301ae06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namePrevix: looking_at_objects
+  nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
+  headers:
+  - time
+  - object
+  - x
+  - y
+  - z
 --- !u!1001 &8757871611557651545
 PrefabInstance:
   m_ObjectHideFlags: 0
