@@ -17,6 +17,7 @@ public class SelectSquare : MonoBehaviour
     PhotonView view;
     public LogFile log;
     private TextMeshProUGUI PlayerTurnText;
+    private TileCoordinates gameSquarePlacement;
 
     // Start is called before the first frame update
     private void Start()
@@ -60,8 +61,8 @@ public class SelectSquare : MonoBehaviour
             PlayerTurnText.SetText("PlayerTurn: White");
             if (log != null)
             {
-                // write the time and the players x and y positions to the file
-                log.WriteLine(Time.time, "event_token_placed_black");
+                // write the time and the placement x and y positions to the file
+                log.WriteLine(Time.time, "event_token_placed_black", gameSquarePlacement.Row, gameSquarePlacement.Column);
             }
         } 
         else if (GrabToken.GrabbedWhiteToken) {
@@ -71,8 +72,8 @@ public class SelectSquare : MonoBehaviour
             PlayerTurnText.SetText("PlayerTurn: Black");
             if (log != null)
             {
-                // write the time and the players x and y positions to the file
-                log.WriteLine(Time.time, "event_token_placed_white");
+                // write the time and the placement x and y positions to the file
+                log.WriteLine(Time.time, "event_token_placed_white", gameSquarePlacement.Row, gameSquarePlacement.Column);
             }
         }
 
@@ -91,6 +92,7 @@ public class SelectSquare : MonoBehaviour
             isInsideGameSquare = true;
             other.gameObject.GetComponent<MeshRenderer>().material = SolidHighlightMat;
             gameSquarePos = other.gameObject.transform.position;
+            gameSquarePlacement = other.gameObject.GetComponent<TileCoordinates>();
         }
     }
 

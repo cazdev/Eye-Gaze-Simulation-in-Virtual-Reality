@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8670645375675414949}
   - component: {fileID: 8670645375675414938}
   - component: {fileID: 8670645375675414939}
+  - component: {fileID: 4428697835163910624}
   m_Layer: 0
   m_Name: GameBoardPlacement
   m_TagString: GameBoardSquare
@@ -29,6 +30,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.47686958, y: 1.243003, z: 0.48602185}
   m_LocalScale: {x: 0.021336438, y: 1, z: 0.021505378}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -95,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43131748, y: 7.55866, z: 0.48296225}
   m_Center: {x: -0.056483354, y: 3.279253, z: -0.0014141669}
+--- !u!114 &4428697835163910624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8670645375675414937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633530c88b8bbe8458cd78a5098c911d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Row: 0
+  Column: 0

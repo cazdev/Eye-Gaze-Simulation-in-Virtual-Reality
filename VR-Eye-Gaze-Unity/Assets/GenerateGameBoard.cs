@@ -26,35 +26,40 @@ public class GenerateGameBoard : MonoBehaviour
             {
 
                 // Corner Placement zones
-                Instantiate(
+                GameObject placement = Instantiate(
                         PlacementSquare,
                         new Vector3(row * 0.03f, 0, column * 0.03f) + StartPos.position - new Vector3(0.015f, -0.01f, 0.015f),
                         Quaternion.identity,
                         transform
                         );
+                placement.GetComponent<TileCoordinates>().Row = row;
+                placement.GetComponent<TileCoordinates>().Column = column;
 
                 // Tiles
                 if (column < Columns && row < Rows)
                 {
                     if (isAlternateTile)
                     {
-                        TileSquare1.tag = column + "," + row;
-                        Instantiate(
+                        GameObject tile = Instantiate(
                             TileSquare1,
                             new Vector3(row * 0.03f, 0, column * 0.03f) + StartPos.position,
                             Quaternion.identity,
                             transform
                             );
+
+                        tile.GetComponent<TileCoordinates>().Row = row;
+                        tile.GetComponent<TileCoordinates>().Column = column;
                     }
                     else
                     {
-                        TileSquare2.tag = "GameboardSquare-" + column + "," + row;
-                        Instantiate(
+                        GameObject tile = Instantiate(
                             TileSquare2,
                             new Vector3(row * 0.03f, 0, column * 0.03f) + StartPos.position,
                             Quaternion.identity,
                             transform
                             );
+                        tile.GetComponent<TileCoordinates>().Row = row;
+                        tile.GetComponent<TileCoordinates>().Column = column;
                     }
                     isAlternateTile = !isAlternateTile;
                 }

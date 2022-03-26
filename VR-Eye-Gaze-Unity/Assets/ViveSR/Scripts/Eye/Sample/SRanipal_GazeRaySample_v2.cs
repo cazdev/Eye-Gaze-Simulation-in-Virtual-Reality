@@ -21,12 +21,9 @@ namespace ViveSR
                 public LogFile logCollisions;
                 private TextMeshProUGUI EyeGazeVectorText;
 
-                private PhotonView photonView;
-
                 // Start is called before the first frame update
                 void Start()
                 {
-                    photonView = GetComponent<PhotonView>();
 
                     EyeGazeVectorText = GameObject.Find("EyeGazeVectorText (TMP)").GetComponent<TextMeshProUGUI>();
 
@@ -92,20 +89,22 @@ namespace ViveSR
                     {
                         // Convert from world space to local
                         var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
+                        var worldHitPoint = hitPoint.point;
 
                         // Get collisions
                         if (logCollisions != null)
                         {
-                            if (hitPoint.collider.tag != "Untagged")
+                            if (hitPoint.collider.tag != "Untagged" && hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player" 
+                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "GameBoard")
                             {
-                                if (photonView.IsMine)
-                                {
-                                    logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, "Player_1");
-                                } else
-                                {
-                                    logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, "Player_2");
-                                }
+                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
                             }
+
+                            // separate logging for gameboard
+                            if (hitPoint.collider.tag == "GameBoard") {
+                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
+                            }
+                            
                         }
                     }
                 }
