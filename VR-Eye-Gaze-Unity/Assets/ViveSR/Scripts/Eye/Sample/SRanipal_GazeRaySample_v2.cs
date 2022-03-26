@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
+using Photon.Pun;
 
 namespace ViveSR
 {
@@ -20,8 +21,13 @@ namespace ViveSR
                 public LogFile logCollisions;
                 private TextMeshProUGUI EyeGazeVectorText;
 
-                private void Start()
+                private PhotonView photonView;
+
+                // Start is called before the first frame update
+                void Start()
                 {
+                    photonView = GetComponent<PhotonView>();
+
                     EyeGazeVectorText = GameObject.Find("EyeGazeVectorText (TMP)").GetComponent<TextMeshProUGUI>();
 
                     if (!SRanipal_Eye_Framework.Instance.EnableEye)
@@ -76,7 +82,7 @@ namespace ViveSR
 
                     if (log != null)
                     {
-                        log.WriteLine(Time.time, GazeDirectionCombined.x, GazeDirectionCombined.y, GazeDirectionCombined.z);
+                        log.WriteLine(Time.time, direction.x, direction.y, direction.z);
                     }
                     EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
 
@@ -92,12 +98,14 @@ namespace ViveSR
                         {
                             if (hitPoint.collider.tag != "Untagged")
                             {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_"+hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z);
+                                if (photonView.IsMine)
+                                {
+                                    logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, "Player_1");
+                                } else
+                                {
+                                    logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, "Player_2");
+                                }
                             }
-                        }
-                        else
-                        {
-                            // No hits
                         }
                     }
                 }

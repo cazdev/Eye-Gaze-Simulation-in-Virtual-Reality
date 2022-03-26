@@ -13628,9 +13628,9 @@ MonoBehaviour:
   nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
   headers:
   - time
-  - x
-  - y
-  - z
+  - rotation_x
+  - rotation_y
+  - rotation_z
 --- !u!1 &7238805053606237939
 GameObject:
   m_ObjectHideFlags: 0
@@ -18160,9 +18160,9 @@ MonoBehaviour:
   nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
   headers:
   - time
-  - x
-  - y
-  - z
+  - direction_x
+  - direction_y
+  - direction_z
 --- !u!114 &1579664201589497306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18201,10 +18201,11 @@ MonoBehaviour:
   nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
   headers:
   - time
-  - object
-  - x
-  - y
-  - z
+  - object_looked_at
+  - local_x
+  - local_y
+  - local_z
+  - player
 --- !u!1001 &8757871611557651545
 PrefabInstance:
   m_ObjectHideFlags: 0
