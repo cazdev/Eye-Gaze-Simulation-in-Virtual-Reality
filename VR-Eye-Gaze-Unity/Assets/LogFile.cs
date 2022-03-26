@@ -7,7 +7,7 @@ using System;
 public class LogFile : MonoBehaviour {
 
 	// find the path to the log folder (this should work cross platform)
-	private string path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Logs");
+	private string path = Path.Combine(Path.GetPathRoot(Environment.SystemDirectory), "Logs");
 
 	public string namePrevix;
 
