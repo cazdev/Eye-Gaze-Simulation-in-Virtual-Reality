@@ -15,7 +15,7 @@ public class VisualisationsGameBoard : MonoBehaviour
     public int Columns = 15;
     public int Rows = 15;
     public Transform StartPos;
-    private LineRenderer lineRenderer;
+    public LineRenderer lineRenderer;
 
     // settings
     const int data_interval = 3;
@@ -35,8 +35,6 @@ public class VisualisationsGameBoard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-
         CreateGameBoard();
         ReadObjectLookedAt();
         LoadPreviousGame();
