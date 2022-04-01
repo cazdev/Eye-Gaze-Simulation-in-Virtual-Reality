@@ -1,22 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Globalization;
 
 public class GenerateGameBoard : MonoBehaviour
 {
     public GameObject TileSquare1;
     public GameObject TileSquare2;
     public GameObject PlacementSquare;
+    public GameObject BlackTokenClone;
+    public GameObject WhiteTokenClone;
     public int Columns = 15;
     public int Rows = 15;
     public Transform StartPos;
+
 
     // Start is called before the first frame update
     void Start()
     {
         CreateGameBoard();
     }
-
     void CreateGameBoard()
     {
         bool isAlternateTile = false;
