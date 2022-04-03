@@ -1,8 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Globalization;
+using System;
 
 public class VisualisationsGameBoard : MonoBehaviour
 {
@@ -19,46 +19,93 @@ public class VisualisationsGameBoard : MonoBehaviour
 
     // settings
     const int data_interval = 3;
-    private Vector2[] whitePlacementCoordinates = new Vector2[] { 
-        new Vector2(1,2), 
-        new Vector2(2,3), 
-        new Vector2(3,4) 
-        };
-    private Vector2[] blackPlacementCoordinates = new Vector2[] { 
-        new Vector2(1,1), 
-        new Vector2(2,2), 
-        new Vector2(3,3) 
-        };
+    List<Vector2> listWhitePlacementCoordinates = new List<Vector2>();
+    List<Vector2> listBlackPlacementCoordinates = new List<Vector2>();
     List<Vector3> listLocalLookAtGameboardCoordinates = new List<Vector3>();
     List<Vector3> listLocalLookAtGlobalCoordinates = new List<Vector3>();
+
+    private const string whitePlacementsFile =  @"C:\white-placed-sample.csv";
+    private const string blackPlacementsFile = @"C:\black-placed-sample.csv";
+    private const string objectLookedAtFile = @"C:\looking-at-objects-sample.csv";
 
     // Start is called before the first frame update
     void Start()
     {
+        // Generate basic gameboard
         CreateGameBoard();
+
+        //Reading data
         ReadObjectLookedAt();
+        ReadPlacementData();
+
+        // Visualisations
         LoadPreviousGame();
         GenerateHeatMap();
         DrawLinesBetweenPoints(Color.red);
     }
 
-    void ReadObjectLookedAt() {
-        Debug.Log("Starting Reading objects looked at");
-
+    void ReadPlacementData()
+    {
         try
+        {
+            using (var reader = new StreamReader(whitePlacementsFile))
             {
-            using(var reader = new StreamReader(@"C:\looking_at_objects-2022-03-26-16-28-10_Player_1.csv"))
+                string headerLine = reader.ReadLine();
+                while (!reader.EndOfStream)
+                {
+                    // Add every x_interval line to prevent too much data and running out of memeory
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    Vector2 newPoint = new Vector2(Int32.Parse(values[2]), Int32.Parse(values[3]));
+                    listWhitePlacementCoordinates.Add(newPoint);
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex);
+        }
+        try
+        {
+            using (var reader = new StreamReader(blackPlacementsFile))
             {
+                string headerLine = reader.ReadLine();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    Vector2 newPoint = new Vector2(Int32.Parse(values[2]), Int32.Parse(values[3]));
+                    listBlackPlacementCoordinates.Add(newPoint);
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError(ex);
+        }
+    }
+
+    void ReadObjectLookedAt()
+    {
+        try
+        {
+            using (var reader = new StreamReader(objectLookedAtFile))
+            {
+                string headerLine = reader.ReadLine();
                 int count = 0;
                 while (!reader.EndOfStream)
                 {
                     // Add every x_interval line to prevent too much data and running out of memeory
-                    if (count % data_interval == 0) {
+                    if (count % data_interval == 0)
+                    {
                         var line = reader.ReadLine();
                         var values = line.Split(',');
 
                         // Creating list of vector3s with gameboard points
-                        if (values[1].Equals("event_looked_at_Gameboard")) {
+                        if (values[1].Equals("event_looked_at_Gameboard"))
+                        {
                             Vector3 newPoint = new Vector3(float.Parse(values[2], CultureInfo.InvariantCulture.NumberFormat),
                                                         float.Parse(values[3], CultureInfo.InvariantCulture.NumberFormat),
                                                         float.Parse(values[4], CultureInfo.InvariantCulture.NumberFormat));
@@ -69,47 +116,46 @@ public class VisualisationsGameBoard : MonoBehaviour
                     count++;
                 }
             }
-        } catch (System.Exception ex)
+        }
+        catch (System.Exception ex)
         {
             Debug.LogError(ex);
         }
     }
 
-    void LoadPreviousGame() {
-        for (int i = 0; i < whitePlacementCoordinates.Length; i++)
+    void LoadPreviousGame()
+    {
+        foreach (Vector2 v in listWhitePlacementCoordinates)
         {
-            Vector2 coords = whitePlacementCoordinates[i];
             GameObject placement = Instantiate(
                         WhiteTokenClone,
-                        new Vector3(coords.x * 0.03f, 0, coords.y * 0.03f) + StartPos.position - new Vector3(0.015f, -0.015f, 0.015f),
-                        Quaternion.identity,
-                        BlackTokenClone.transform
+                        new Vector3(v.x * 0.03f, 0, v.y * 0.03f) + StartPos.position - new Vector3(0.015f, -0.015f, 0.015f),
+                        Quaternion.identity
                         );
         }
-        for (int i = 0; i < blackPlacementCoordinates.Length; i++)
+        foreach (Vector2 v in listBlackPlacementCoordinates)
         {
-            Vector2 coords = blackPlacementCoordinates[i];
             GameObject placement = Instantiate(
                         BlackTokenClone,
-                        new Vector3(coords.x * 0.03f, 0, coords.y * 0.03f) + StartPos.position - new Vector3(0.015f, -0.015f, 0.015f),
-                        Quaternion.identity,
-                        BlackTokenClone.transform
+                        new Vector3(v.x * 0.03f, 0, v.y * 0.03f) + StartPos.position - new Vector3(0.015f, -0.015f, 0.015f),
+                        Quaternion.identity
                         );
         }
     }
 
-    void DrawLinesBetweenPoints(Color color) {
+    void DrawLinesBetweenPoints(Color color)
+    {
         lineRenderer.SetPositions(listLocalLookAtGlobalCoordinates.ToArray());
     }
 
-    void GenerateHeatMap() {
+    void GenerateHeatMap()
+    {
         foreach (Vector3 v in listLocalLookAtGameboardCoordinates)
         {
             GameObject placement = Instantiate(
                         HeatSphere,
                         this.transform.TransformPoint(new Vector3(v.x, v.y, v.z) + new Vector3(0f, 1f, 0f)),
-                        Quaternion.identity,
-                        HeatSphere.transform
+                        Quaternion.identity
                         );
             listLocalLookAtGlobalCoordinates.Add(placement.transform.position);
         }
@@ -163,11 +209,5 @@ public class VisualisationsGameBoard : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

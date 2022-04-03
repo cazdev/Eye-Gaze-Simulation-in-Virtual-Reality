@@ -70,10 +70,4 @@ public class GenerateGameBoard : MonoBehaviour
             }
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

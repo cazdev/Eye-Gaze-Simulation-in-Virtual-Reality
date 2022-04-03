@@ -40,7 +40,7 @@ public class LogFile : MonoBehaviour {
 
 		// write a header for all the columns we will logging
 
-		log.WriteLine(string.Join("\t", headers));
+		log.WriteLine(string.Join(",", headers));
 		log.Flush();	// flush after every write, to make sure the buffer is written to disk
 
 		// construct a line format string
@@ -48,7 +48,7 @@ public class LogFile : MonoBehaviour {
 		lineFormat = "";
 		for (int i = 0; i < headers.Length; i++) {
 			if (i > 0) {
-				lineFormat += "\t";
+				lineFormat += ",";
 			}
 			lineFormat += string.Format("{{{0}}}", i);
 		}
