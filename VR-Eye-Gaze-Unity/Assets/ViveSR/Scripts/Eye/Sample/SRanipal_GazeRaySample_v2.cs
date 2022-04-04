@@ -92,19 +92,17 @@ namespace ViveSR
                         var worldHitPoint = hitPoint.point;
 
                         // Get collisions
-                        if (logCollisions != null)
+                        if (logCollisions != null && hitPoint.collider.tag != "Untagged")
                         {
-                            if (hitPoint.collider.tag != "Untagged" && hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player" 
-                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "GameBoard")
+                                                        // separate logging for gameboard
+                            if (hitPoint.collider.tag == "Gameboard") {
+                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
+                            }
+                            if (hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player" 
+                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "Gameboard")
                             {
                                 logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
                             }
-
-                            // separate logging for gameboard
-                            if (hitPoint.collider.tag == "GameBoard") {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                            
                         }
                     }
                 }
