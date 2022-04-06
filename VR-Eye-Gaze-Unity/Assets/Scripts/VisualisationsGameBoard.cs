@@ -24,9 +24,9 @@ public class VisualisationsGameBoard : MonoBehaviour
     List<Vector3> listLocalLookAtGameboardCoordinates = new List<Vector3>();
     List<Vector3> listLocalLookAtGlobalCoordinates = new List<Vector3>();
 
-    private const string whitePlacementsFile =  @"C:\white-placed-sample.csv";
-    private const string blackPlacementsFile = @"C:\black-placed-sample.csv";
-    private const string objectLookedAtFile = @"C:\looking-at-objects-sample.csv";
+    private const string whitePlacementsFile =  @"C:\white-placed.csv";
+    private const string blackPlacementsFile = @"C:\black-placed.csv";
+    private const string objectLookedAtFile = @"C:\looking-at-objects.csv";
 
     // Start is called before the first frame update
     void Start()

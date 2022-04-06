@@ -35,7 +35,7 @@ namespace ViveSR
                     Assert.IsNotNull(GazeRayRenderer);
                 }
 
-                private void Update()
+                private void FixedUpdate()
                 {
                     if (SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.WORKING &&
                         SRanipal_Eye_Framework.Status != SRanipal_Eye_Framework.FrameworkStatus.NOT_SUPPORT) return;
@@ -90,18 +90,36 @@ namespace ViveSR
                         // Convert from world space to local
                         var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
                         var worldHitPoint = hitPoint.point;
-
                         // Get collisions
-                        if (logCollisions != null && hitPoint.collider.tag != "Untagged")
+                        if (logCollisions != null)
                         {
-                                                        // separate logging for gameboard
-                            if (hitPoint.collider.tag == "Gameboard") {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                            if (hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player" 
-                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "Gameboard")
+                            Debug.Log(hitPoint.collider.tag);
+                            if (hitPoint.collider.tag != "Untagged" && hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player"
+                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "GameBoard"
+                                && hitPoint.collider.tag != "Gameboard")
                             {
                                 logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
+                            }
+                        }
+                    }
+
+                    RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity);
+
+                    // For each object that the raycast hits.
+                    foreach (RaycastHit hit in hits)
+                    {
+                        // Convert from world space to local
+                        var localHitPoint = hit.transform.InverseTransformPoint(hit.point);
+                        var worldHitPoint = hit.point;
+
+                        // separate logging for gameboard
+                        // Get collisions
+                        if (logCollisions != null)
+                        {
+                            Debug.Log(hit.collider.tag);
+                            if (hit.collider.tag == "GameBoard" && hit.collider.tag == "Gameboard")
+                            {
+                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hit.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
                             }
                         }
                     }

@@ -1,0 +1,215 @@
+[33mcommit 8e71a7ade735fad8d4f8e5a905840d4ad753cac0[m[33m ([m[1;36mHEAD -> [m[1;32mvisualisations[m[33m, [m[1;31morigin/visualisations[m[33m)[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Mon Apr 4 18:07:19 2022 +1000
+
+    Fixed errors & fixed gameboard tag logging
+
+[33mcommit 5be49cc0a3cd3ee3b90e6956f579dfb25476b0d1[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Apr 3 13:48:02 2022 +1000
+
+    Removed old instance
+
+[33mcommit 4406363116ea053da211392e541173dd3b5beaba[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Apr 3 13:41:38 2022 +1000
+
+    Loading data for token placements
+
+[33mcommit cc005cdc662ce1e938fab737a83f83553d9a4f6c[m[33m ([m[1;31morigin/data-logging[m[33m, [m[1;32mdata-logging[m[33m)[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Fri Apr 1 14:38:02 2022 +1100
+
+    Removed arm/hand networking
+
+[33mcommit 0d34f79f4244b3b1c256781b2f691b6d49174131[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Fri Apr 1 14:24:29 2022 +1100
+
+    Arm networking
+
+[33mcommit 6ed2a9a2cf183893e80e3532e9ffbf42281eff41[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Fri Apr 1 13:57:10 2022 +1100
+
+    Fixing hand networking
+
+[33mcommit 59fb9bd41be1019e387311aa16092095caff5c10[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Fri Apr 1 13:36:36 2022 +1100
+
+    Added visualisations and hand movement
+
+[33mcommit 486a65194216917388cd4c961d92199ec85410b1[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 26 18:19:08 2022 +1100
+
+    Logging fixes & fixed placement
+
+[33mcommit 52563e8e1cad8d48becc197e2197b06be718408a[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 26 16:24:50 2022 +1100
+
+    Moved logs to local drive
+
+[33mcommit 057f0e817da9d897e1bb4196b4f61875d2c443ba[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 26 15:38:52 2022 +1100
+
+    Added player numbers to object looked at logs
+
+[33mcommit 2245bab5732e599916e971d103d2b89d7d02663c[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 26 15:16:37 2022 +1100
+
+    Fixing eye rotation network
+
+[33mcommit 782be6c65b20e29da91bac00bb6c89a1e45ea513[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 26 14:39:46 2022 +1100
+
+    Stop eyes using local rotation
+
+[33mcommit 2dd7d604718f037e8cbd06397a0b2123b0671337[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Fri Mar 25 19:02:01 2022 +1100
+
+    testing left eye movement
+
+[33mcommit 1edff39cce9a8c844e33f3bed75798d9f2316cc9[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Thu Mar 24 22:24:48 2022 +1100
+
+    Added more object tags
+
+[33mcommit dacb232db7bc7c86397f40886ef9308df7b7c734[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Thu Mar 24 22:16:00 2022 +1100
+
+    Data logging fixes & adding more tags
+
+[33mcommit f051e4e8f5658a0f5b570a84f7593d3f96779a3e[m[33m ([m[1;31morigin/networking[m[33m, [m[1;32mnetworking[m[33m)[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 13 20:37:33 2022 +1100
+
+    Added ui text
+
+[33mcommit 71ba34909254b21900505722ee53df53f64f7c09[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sat Mar 12 12:13:09 2022 +1100
+
+    Added UI text
+
+[33mcommit 93a64b53077172965f6449db10e0295d6f9f1352[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sat Mar 12 11:35:33 2022 +1100
+
+    networking prefabs
+
+[33mcommit a3c915f7edc0801fe3bdf4613ee27a1a4732dc96[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 20:35:01 2022 +1100
+
+    Fixed white and black token placement
+
+[33mcommit f6699a5056de01981dbf25dc022648387ecc2cda[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 15:31:49 2022 +1100
+
+    Fixing prefabs
+
+[33mcommit 04a175d6d09511c33c756596d0b96c68e0e408a9[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 15:10:51 2022 +1100
+
+    Sync head
+
+[33mcommit 118b1ae5ffdca365820e8e3e5989c574e0ec48e3[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 14:56:18 2022 +1100
+
+    Fixed tokenclone
+
+[33mcommit cb60ce77206295a6ff8dd3f36e15927f1af29aac[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 14:51:08 2022 +1100
+
+    Network instantiate tokens
+
+[33mcommit 81d3e24431c6ac8b3388cd79ac34c2edd655d586[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Mar 6 14:20:02 2022 +1100
+
+    Fixing networked head
+
+[33mcommit 76d0e4ca0fb774cd179c4d5f70fe32937516bac5[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 14:15:24 2022 +1100
+
+    Fixed token not instantiating
+
+[33mcommit f7180e1b260fefa474eea25ee918996acc7d74c1[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 13:45:40 2022 +1100
+
+    Avatar only shows on other client
+
+[33mcommit 591b07b661ea28d2df23bc77f87c2f65e3f415d6[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 13:15:05 2022 +1100
+
+    Fixing token placement across network
+
+[33mcommit 3a0aca82d71e6b5591e8174ea865d48e580eee9d[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 13:04:56 2022 +1100
+
+    Fixed head showing across network
+
+[33mcommit a161b6dabfcf62cac12bf3864915c9529bfd586e[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 12:50:45 2022 +1100
+
+    Added second player spawn location
+
+[33mcommit f9cacca443bd78ee90c9a8b134b3a625f0696876[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 12:46:09 2022 +1100
+
+    Networking fixes & head movement
+
+[33mcommit 37d1f901b6c70c16e1d0580ccc7df210bd7cfe61[m
+Author: Chaz L <contact@caz-dev.com>
+Date:   Sat Mar 5 12:14:46 2022 +1100
+
+    Upgraded to 2021.2.9
+
+[33mcommit 3cb27c22cbafa3d6232298c3b7377c193a105e23[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sat Mar 5 11:22:00 2022 +1100
+
+    Netowkred scripts and fixes
+
+[33mcommit cf5ea498d12633ff9979ba3fff25cbd4413546e9[m[33m ([m[1;31morigin/gomoku-game[m[33m, [m[1;32mgomoku-game[m[33m)[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Feb 6 17:26:58 2022 +1100
+
+    Generated game board
+
+[33mcommit e330d9a8eee226aa787ba36655e73c400c6ebe58[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sat Jan 29 20:16:07 2022 +1100
+
+    Two player with networking
+
+[33mcommit 5c0d8d1df554ab57701bee319540d8177c7d01f9[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Jan 23 15:19:21 2022 +1100
+
+    Removed old files
+
+[33mcommit 91a53a58eeca00efe5042f6e936619852bbd9e92[m
+Author: cazdev <chaz6cl@live.com>
+Date:   Sun Jan 23 14:41:50 2022 +1100
+
+    fixed token grab inconsistencies
