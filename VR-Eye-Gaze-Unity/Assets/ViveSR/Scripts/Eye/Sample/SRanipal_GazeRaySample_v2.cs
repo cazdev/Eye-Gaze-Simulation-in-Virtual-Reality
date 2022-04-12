@@ -73,73 +73,6 @@ namespace ViveSR
                     GazeRayRenderer.SetPosition(1, Camera.main.transform.position + GazeDirectionCombined * LengthOfRay);
 
                     // Calculate direction from these 2 points
-                    Vector3 fromPosition = Camera.main.transform.position;
-                    Vector3 toPosition = Camera.main.transform.position + GazeDirectionCombined * LengthOfRay;
-                    Vector3 direction = toPosition - fromPosition;
-
-                    if (log != null)
-                    {
-                        log.WriteLine(Time.time, direction.x, direction.y, direction.z);
-                    }
-                    EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
-
-                    RaycastHit hitPoint;
-                    Ray ray = new Ray(fromPosition, direction);
-                    if (Physics.Raycast(ray, out hitPoint, Mathf.Infinity))
-                    {
-                        // Convert from world space to local
-                        var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
-                        var worldHitPoint = hitPoint.point;
-                        // Get collisions
-                        if (logCollisions != null)
-                        {
-                            Debug.Log(hitPoint.collider.tag);
-<<<<<<< Updated upstream
-                            if (hitPoint.collider.tag != "Untagged" && hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player"
-                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "GameBoard"
-                                && hitPoint.collider.tag != "Gameboard")
-                            {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                        }
-                    }
-
-                    RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity);
-
-                    // For each object that the raycast hits.
-                    foreach (RaycastHit hit in hits)
-                    {
-                        // Convert from world space to local
-                        var localHitPoint = hit.transform.InverseTransformPoint(hit.point);
-                        var worldHitPoint = hit.point;
-
-                        // separate logging for gameboard
-                        // Get collisions
-                        if (logCollisions != null)
-                        {
-                            Debug.Log(hit.collider.tag);
-                            if (hit.collider.tag == "GameBoard" && hit.collider.tag == "Gameboard")
-=======
-                            // separate logging for gameboard
-                            if (hitPoint.collider.tag == "Gameboard")
-                            {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                            if (hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player"
-                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "Gameboard")
->>>>>>> Stashed changes
-                            {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hit.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                        }
-                    }
-                }
-
-                private Vector3 GazeDirectionCombined = new Vector3();
-
-                void FixedUpdate()
-                {
-                    // Calculate direction from these 2 points
                     Vector3 fromPosition = Camera.main.transform.position - Camera.main.transform.up * 0.05f;
                     Vector3 toPosition = Camera.main.transform.position + GazeDirectionCombined * LengthOfRay;
                     Vector3 direction = toPosition - fromPosition;
@@ -150,25 +83,7 @@ namespace ViveSR
                     }
                     EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
 
-                    RaycastHit hitPoint;
                     Ray ray = new Ray(fromPosition, direction);
-                    if (Physics.Raycast(ray, out hitPoint, Mathf.Infinity))
-                    {
-                        // Convert from world space to local
-                        var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
-                        var worldHitPoint = hitPoint.point;
-
-                        // Get collisions
-                        if (logCollisions != null && hitPoint.collider.tag != "Untagged")
-                        {
-                            if (hitPoint.collider.tag != "GameBoardSquare" && hitPoint.collider.tag != "Player"
-                                && hitPoint.collider.tag != "WhiteTokenOnBoard" && hitPoint.collider.tag != "BlackTokenOnBoard" && hitPoint.collider.tag != "Gameboard"
-                                && hitPoint.collider.tag != "GameBoard")
-                            {
-                                logCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
-                            }
-                        }
-                    }
 
                     // Separate logging for gamboard
                     RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity);
@@ -179,14 +94,14 @@ namespace ViveSR
                         var localHitPoint = hit.transform.InverseTransformPoint(hit.point);
                         var worldHitPoint = hit.point;
 
-                        Debug.Log(hit.collider.tag);
-                        // separate logging for gameboard
-                        if (hit.collider.tag == "Gameboard")
+                        if (logCollisions != null && hit.collider.tag != "Untagged")
                         {
                             logCollisions.WriteLine(Time.time, "event_looked_at_" + hit.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
                         }
                     }
                 }
+
+                private Vector3 GazeDirectionCombined = new Vector3();
 
                 private void Release()
                 {
