@@ -18,7 +18,11 @@ public class VisualisationsGameBoard : MonoBehaviour
     public LineRenderer lineRenderer;
 
     // settings
-    const int data_interval = 3;
+
+    // interval of read data (e.g. every 2nd sample)
+    const int data_interval = 2;
+
+    // loaded data
     List<Vector2> listWhitePlacementCoordinates = new List<Vector2>();
     List<Vector2> listBlackPlacementCoordinates = new List<Vector2>();
     List<Vector3> listLocalLookAtGameboardCoordinates = new List<Vector3>();
@@ -106,9 +110,9 @@ public class VisualisationsGameBoard : MonoBehaviour
                         // Creating list of vector3s with gameboard points
                         if (values[1].Equals("event_looked_at_Gameboard"))
                         {
-                            Vector3 newPoint = new Vector3(float.Parse(values[2], CultureInfo.InvariantCulture.NumberFormat),
+                            Vector3 newPoint = new Vector3(float.Parse(values[2], CultureInfo.InvariantCulture.NumberFormat)-0.015f,
                                                         float.Parse(values[3], CultureInfo.InvariantCulture.NumberFormat),
-                                                        float.Parse(values[4], CultureInfo.InvariantCulture.NumberFormat));
+                                                        float.Parse(values[4], CultureInfo.InvariantCulture.NumberFormat)-0.05f);
                             listLocalLookAtGameboardCoordinates.Add(newPoint);
                         }
                     }
