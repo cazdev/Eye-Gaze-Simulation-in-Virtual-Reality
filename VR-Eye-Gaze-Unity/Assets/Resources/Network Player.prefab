@@ -18308,6 +18308,16 @@ PrefabInstance:
       propertyPath: logCollisions
       value: 
       objectReference: {fileID: 3812850199446541772}
+    - target: {fileID: 114910015600936222, guid: 365dc3c335a5e88408e7792556958cfc,
+        type: 3}
+      propertyPath: logAllCollisions
+      value: 
+      objectReference: {fileID: 3812850199446541772}
+    - target: {fileID: 114910015600936222, guid: 365dc3c335a5e88408e7792556958cfc,
+        type: 3}
+      propertyPath: logFirstCollisions
+      value: 
+      objectReference: {fileID: 6514239304288686784}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 365dc3c335a5e88408e7792556958cfc, type: 3}
 --- !u!4 &8333446028497448723 stripped
@@ -18375,7 +18385,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6faa8e84f49815e4ab64b7668301ae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePrevix: looking_at_objects
+  namePrevix: all_looking_at_objects
+  nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
+  headers:
+  - time
+  - object_looked_at
+  - local_x
+  - local_y
+  - local_z
+  - world_x
+  - world_y
+  - world_z
+--- !u!114 &6514239304288686784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336110269107399505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6faa8e84f49815e4ab64b7668301ae06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  namePrevix: first_looking_at_objects
   nameFormat: '{0}/{1}-{2:yyyy-MM-dd-HH-mm-ss}.txt'
   headers:
   - time
