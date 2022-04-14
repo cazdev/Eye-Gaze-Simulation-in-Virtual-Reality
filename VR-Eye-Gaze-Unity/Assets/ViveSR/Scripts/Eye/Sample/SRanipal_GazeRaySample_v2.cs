@@ -18,7 +18,8 @@ namespace ViveSR
                 private static EyeData_v2 eyeData = new EyeData_v2();
                 private bool eye_callback_registered = false;
                 public LogFile log;
-                public LogFile logCollisions;
+                public LogFile logAllCollisions;
+                public LogFile logFirstCollisions;
                 private TextMeshProUGUI EyeGazeVectorText;
 
                 // Start is called before the first frame update
@@ -83,10 +84,24 @@ namespace ViveSR
                     }
                     EyeGazeVectorText.SetText("EyeGazeVector: " + GazeDirectionCombined.ToString());
 
-                    Ray ray = new Ray(fromPosition, direction);
+                    RaycastHit hitPoint;
+                    Ray rayFirst = new Ray(fromPosition, direction);
+                    if (Physics.Raycast(rayFirst, out hitPoint, Mathf.Infinity))
+                    {
+                        // Convert from world space to local
+                        var localHitPoint = hitPoint.transform.InverseTransformPoint(hitPoint.point);
+                        var worldHitPoint = hitPoint.point;
+                        // Get collisions
+                        if (logFirstCollisions != null && hitPoint.collider.tag != "Untagged")
+                        {
+                            logFirstCollisions.WriteLine(Time.time, "event_looked_at_" + hitPoint.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
+                        }
+                    }
+
+                    Ray rayAll = new Ray(fromPosition, direction);
 
                     // Separate logging for gamboard
-                    RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity);
+                    RaycastHit[] hits = Physics.RaycastAll(rayAll, Mathf.Infinity);
 
                     // For each object that the raycast hits.
                     foreach (RaycastHit hit in hits)
@@ -94,9 +109,9 @@ namespace ViveSR
                         var localHitPoint = hit.transform.InverseTransformPoint(hit.point);
                         var worldHitPoint = hit.point;
 
-                        if (logCollisions != null && hit.collider.tag != "Untagged")
+                        if (logAllCollisions != null && hit.collider.tag != "Untagged")
                         {
-                            logCollisions.WriteLine(Time.time, "event_looked_at_" + hit.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
+                            logAllCollisions.WriteLine(Time.time, "event_looked_at_" + hit.collider.tag, localHitPoint.x, localHitPoint.y, localHitPoint.z, worldHitPoint.x, worldHitPoint.y, worldHitPoint.z);
                         }
                     }
                 }
