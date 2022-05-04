@@ -2,7 +2,7 @@
 
 To run this scene and demo scenes, follow the Vive Pro Eye Development Guide [here](https://vr.tobii.com/sdk/develop/unity/getting-started/vive-pro-eye/).
 
-** NOTE: The latest version of this project is in the visualisations branch **
+**NOTE: The latest version of this project is in the visualisations branch**
 
 ![image](https://user-images.githubusercontent.com/25926533/166840905-ce647351-0478-497d-b34a-a86028cbe8e1.png)
 
